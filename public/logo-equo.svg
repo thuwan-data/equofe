@@ -1,0 +1,16 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="equo-logo">
+    <!-- Main logo text -->
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#26a69a">
+      equo
+    </text>
+    <!-- Tagline -->
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="8" fill="#495057">
+      Education for all
+    </text>
+    <!-- Decorative element -->
+    <circle cx="85" cy="15" r="3" fill="#26a69a" opacity="0.7"/>
+    <circle cx="95" cy="20" r="2" fill="#26a69a" opacity="0.5"/>
+    <circle cx="105" cy="10" r="1.5" fill="#26a69a" opacity="0.3"/>
+  </g>
+</svg>
