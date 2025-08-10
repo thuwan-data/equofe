@@ -1,0 +1,38 @@
+<svg width="120" height="160" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="bookshelf">
+    <!-- Shelf structure -->
+    <rect x="0" y="30" width="120" height="4" rx="2" fill="#8d6e63"/>
+    <rect x="0" y="80" width="120" height="4" rx="2" fill="#8d6e63"/>
+    <rect x="0" y="130" width="120" height="4" rx="2" fill="#8d6e63"/>
+    
+    <!-- Books on top shelf -->
+    <rect x="10" y="10" width="8" height="20" rx="1" fill="#e53935"/>
+    <rect x="20" y="10" width="8" height="20" rx="1" fill="#1e88e5"/>
+    <rect x="30" y="10" width="8" height="20" rx="1" fill="#43a047"/>
+    <rect x="40" y="12" width="8" height="18" rx="1" fill="#fb8c00"/>
+    <rect x="50" y="8" width="8" height="22" rx="1" fill="#8e24aa"/>
+    
+    <!-- Books on middle shelf -->
+    <rect x="15" y="60" width="8" height="20" rx="1" fill="#fdd835"/>
+    <rect x="25" y="58" width="8" height="22" rx="1" fill="#e91e63"/>
+    <rect x="35" y="62" width="8" height="18" rx="1" fill="#00acc1"/>
+    <rect x="45" y="60" width="8" height="20" rx="1" fill="#7cb342"/>
+    
+    <!-- Books on bottom shelf -->
+    <rect x="20" y="110" width="8" height="20" rx="1" fill="#ff7043"/>
+    <rect x="30" y="108" width="8" height="22" rx="1" fill="#ab47bc"/>
+    <rect x="40" y="112" width="8" height="18" rx="1" fill="#26c6da"/>
+    <rect x="50" y="110" width="8" height="20" rx="1" fill="#66bb6a"/>
+    <rect x="60" y="109" width="8" height="21" rx="1" fill="#ffca28"/>
+    
+    <!-- Book spines details -->
+    <line x1="12" y1="12" x2="12" y2="28" stroke="#c62828" stroke-width="0.5"/>
+    <line x1="22" y1="12" x2="22" y2="28" stroke="#1565c0" stroke-width="0.5"/>
+    <line x1="32" y1="12" x2="32" y2="28" stroke="#2e7d32" stroke-width="0.5"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="80" cy="20" r="2" fill="#26a69a" opacity="0.3"/>
+    <circle cx="85" cy="70" r="1.5" fill="#26a69a" opacity="0.4"/>
+    <circle cx="75" cy="120" r="1" fill="#26a69a" opacity="0.5"/>
+  </g>
+</svg>
