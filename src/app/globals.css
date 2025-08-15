@@ -622,20 +622,21 @@ body {
 .dashboard-container {
   display: flex;
   min-height: 100vh;
-  background: var(--light-gray);
+  background: var(--BG);
+  padding: 8px;
+  gap: 0;
 }
 
 .dashboard-sidebar {
-  width: 250px;
-  background: #1a1a1a;
-  color: var(--white);
+  width: 354px;
+  background: var(--Black);
+  color: var(--White);
   display: flex;
   flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  z-index: 100;
+  border-radius: 20px;
+  height: calc(100vh - 16px);
+  position: relative;
+  flex-shrink: 0;
 }
 
 .sidebar-header {
