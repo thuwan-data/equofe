@@ -21,12 +21,12 @@ interface AdminClassScheduleProps {
 }
 
 const defaultClasses: ClassScheduleItem[] = [
-  { id: '1', number: 1, subject: 'Mathematics', code: 'MTH18', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-  { id: '2', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-  { id: '3', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-  { id: '4', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-  { id: '5', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-  { id: '6', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' }
+  { id: '1', number: 1, subject: 'Mathematics', code: '7MTH5', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+  { id: '2', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+  { id: '3', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+  { id: '4', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+  { id: '5', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+  { id: '6', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' }
 ];
 
 export default function AdminClassSchedule({ 
