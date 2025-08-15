@@ -15,7 +15,7 @@ export default function HomePage() {
     <div className="loading-container">
       <div className="loading-content">
         <h1>Welcome to Equo</h1>
-        <p>Redirecting to admin login...</p>
+        <p>Loading admin dashboard...</p>
         <div className="loading-spinner"></div>
       </div>
     </div>
