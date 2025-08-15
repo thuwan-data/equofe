@@ -937,67 +937,98 @@ body {
 }
 
 .classes-list {
-  max-height: 500px;
-  overflow-y: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
 }
 
 .class-item {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--medium-gray);
-}
-
-.class-item:last-child {
-  border-bottom: none;
+  padding: 14px 17px;
+  border: 1px solid var(--Branding);
+  border-radius: 6px;
+  background: var(--White);
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
 }
 
 .class-header {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .lesson-number {
-  font-weight: 600;
-  color: var(--foreground);
+  font-weight: 700;
+  color: var(--Black);
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  line-height: 24px;
 }
 
 .class-details {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .subject-name {
-  color: var(--primary-green);
-  font-weight: 500;
+  color: var(--Branding);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.subject-name.physics {
+  color: var(--Purple-2);
 }
 
 .subject-code {
-  color: var(--dark-gray);
-  font-size: 0.875rem;
+  color: var(--Branding);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.subject-code.physics {
+  color: var(--Purple-2);
 }
 
 .class-meta {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 41px;
 }
 
 .class-time,
 .class-date,
 .class-year {
-  font-size: 0.75rem;
-  color: var(--dark-gray);
+  font-size: 17px;
+  color: var(--Secondary-Text);
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 7.5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  height: 20px;
 }
 
 .class-list-button {
-  background: var(--primary-green);
-  color: var(--white);
-  border: none;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--border-radius);
-  font-size: 0.75rem;
+  background: var(--White);
+  color: var(--Branding);
+  border: 0.857px solid var(--Branding);
+  padding: 7.714px 14.571px;
+  border-radius: 18px;
+  font-size: 14.571px;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  height: 36px;
+  width: 89.143px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-sidebar {
