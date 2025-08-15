@@ -1057,35 +1057,52 @@ body {
 }
 
 .calendar-header {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding: 0 21px;
 }
 
 .weekday {
   text-align: center;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--dark-gray);
-  padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
+  width: 35px;
 }
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.25rem;
+.calendar-days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 21px;
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  align-items: center;
 }
 
 .calendar-day {
-  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.875rem;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--Black);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 15px;
   transition: background-color 0.2s;
+  width: 35px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.calendar-day.weekend {
+  color: var(--Secondary-Text);
 }
 
 .calendar-day:hover {
@@ -1093,8 +1110,10 @@ body {
 }
 
 .calendar-day-today {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--Branding);
+  color: var(--White);
+  padding: 4px 6px 3px 4px;
+  width: 30px;
 }
 
 .students-card {
