@@ -34,10 +34,13 @@ export default function AdminDashboardHeader({
     <header className={`dashboard-header ${className}`}>
       <div className="search-container">
         <div className="search-input-wrapper">
-          <span className="search-icon">🔍</span>
-          <input 
-            type="text" 
-            placeholder="Search" 
+          <svg className="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M20.9999 21L16.6499 16.65" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <input
+            type="text"
+            placeholder="Search"
             className="search-input"
             value={searchQuery}
             onChange={handleSearchChange}
