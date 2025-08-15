@@ -51,8 +51,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--BG);
   position: relative;
+  background-image: url('/illustrations/background-dots.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .login-header {
@@ -72,14 +76,16 @@ body {
 .brand-text {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-green);
+  color: var(--Branding);
   line-height: 1;
+  font-family: 'Inter', sans-serif;
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
   margin-top: -2px;
+  font-family: 'Inter', sans-serif;
 }
 
 .language-selector {
@@ -87,14 +93,16 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
+  font-family: 'Inter', sans-serif;
 }
 
 .language-dropdown {
   background: transparent;
   border: none;
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
 .login-main {
