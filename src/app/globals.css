@@ -584,8 +584,9 @@ body {
 
 .forgot-password-description,
 .forgot-password-support {
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
   line-height: 1.6;
+  font-family: 'Inter', sans-serif;
 }
 
 .forgot-password-form {
@@ -595,8 +596,8 @@ body {
 }
 
 .submit-forgot-password-button {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--Branding);
+  color: var(--White);
   padding: 0.875rem 2rem;
   border: none;
   border-radius: var(--border-radius);
@@ -604,6 +605,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Inter', sans-serif;
 }
 
 .submit-forgot-password-button:hover {
@@ -618,13 +620,14 @@ body {
 }
 
 .success-message p {
-  color: var(--primary-green);
+  color: var(--Branding);
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 .back-to-login-button {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--Branding);
+  color: var(--White);
   padding: 0.875rem 2rem;
   border: none;
   border-radius: var(--border-radius);
@@ -633,6 +636,7 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.2s;
+  font-family: 'Inter', sans-serif;
 }
 
 .back-to-login-button:hover {
