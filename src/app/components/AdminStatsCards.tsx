@@ -85,10 +85,7 @@ export default function AdminStatsCards({
       <div className="stats-grid">
         {stats.map((stat) => (
           <div key={stat.id} className="stat-card">
-            <div 
-              className="stat-icon"
-              style={{ backgroundColor: stat.bgColor }}
-            >
+            <div className="stat-icon">
               {stat.icon}
             </div>
             <div className="stat-content">
