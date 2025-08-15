@@ -7,60 +7,65 @@ export default function TestNavigationPage() {
       <p>Test all the admin routes:</p>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem' }}>
-        <Link 
-          href="/pages/admin" 
-          style={{ 
-            padding: '1rem', 
-            background: '#26a69a', 
-            color: 'white', 
-            textDecoration: 'none', 
-            borderRadius: '8px',
-            textAlign: 'center'
+        <Link
+          href="/pages/admin/dashboard"
+          style={{
+            padding: '1rem',
+            background: '#288474',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '12px',
+            textAlign: 'center',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: '600'
           }}
         >
-          🔐 Admin Login Page
+          📊 Updated Admin Dashboard (Figma Design)
         </Link>
-        
-        <Link 
-          href="/pages/admin/forgot-password" 
-          style={{ 
-            padding: '1rem', 
-            background: '#42a5f5', 
-            color: 'white', 
-            textDecoration: 'none', 
-            borderRadius: '8px',
-            textAlign: 'center'
+
+        <Link
+          href="/pages/admin"
+          style={{
+            padding: '1rem',
+            background: '#288474',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '12px',
+            textAlign: 'center',
+            fontFamily: 'Inter, sans-serif'
           }}
         >
-          🔑 Forgot Password Page
+          🔐 Admin Login Page (Centered)
         </Link>
-        
-        <Link 
-          href="/pages/admin/dashboard" 
-          style={{ 
-            padding: '1rem', 
-            background: '#66bb6a', 
-            color: 'white', 
-            textDecoration: 'none', 
-            borderRadius: '8px',
-            textAlign: 'center'
+
+        <Link
+          href="/pages/admin/forgot-password"
+          style={{
+            padding: '1rem',
+            background: '#288474',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '12px',
+            textAlign: 'center',
+            fontFamily: 'Inter, sans-serif'
           }}
         >
-          📊 Admin Dashboard
+          🔑 Forgot Password Page (Centered)
         </Link>
-        
-        <Link 
-          href="/" 
-          style={{ 
-            padding: '1rem', 
-            background: '#ffa726', 
-            color: 'white', 
-            textDecoration: 'none', 
-            borderRadius: '8px',
-            textAlign: 'center'
+
+        <Link
+          href="/"
+          style={{
+            padding: '1rem',
+            background: '#A2EBC1',
+            color: '#000',
+            textDecoration: 'none',
+            borderRadius: '12px',
+            textAlign: 'center',
+            fontFamily: 'Inter, sans-serif'
           }}
         >
-          🏠 Home Page (redirects to admin)
+          🏠 Home Page (redirects to dashboard)
         </Link>
       </div>
       
