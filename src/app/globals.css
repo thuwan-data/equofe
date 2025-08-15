@@ -325,8 +325,8 @@ body {
 }
 
 .login-button {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--Branding);
+  color: var(--White);
   padding: 0.875rem;
   border: none;
   border-radius: var(--border-radius);
@@ -334,6 +334,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Inter', sans-serif;
 }
 
 .login-button:hover {
@@ -342,10 +343,11 @@ body {
 
 .forgot-password-link {
   text-align: center;
-  color: var(--primary-green);
+  color: var(--Branding);
   text-decoration: none;
   font-size: 0.875rem;
   margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .forgot-password-link:hover {
