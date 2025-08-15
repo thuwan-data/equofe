@@ -54,11 +54,29 @@ export default function AdminClassSchedule({
     <div className={`content-card classes-card ${className}`}>
       <div className="card-header">
         <h2 className="card-title">Today's Classes Schedule</h2>
-        <button 
+        <button
           className="filter-button"
           onClick={handleFilterClick}
         >
-          Filter ⚙️
+          Filter
+          <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_1_2928)">
+              <path d="M4.16675 17.5V11.6666" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M4.16675 8.33333V2.5" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10.8335 17.5V10" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10.8335 6.66667V2.5" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M17.5002 17.5V13.3334" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M17.5002 10V2.5" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1.66675 11.6666H6.66675" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M8.3335 6.66663H13.3335" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15.0002 13.3334H20.0002" stroke="#288474" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1_2928">
+                <rect width="20" height="20" fill="white" transform="translate(0.833496)"/>
+              </clipPath>
+            </defs>
+          </svg>
         </button>
       </div>
       
