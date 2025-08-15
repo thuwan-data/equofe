@@ -735,12 +735,12 @@ body {
 }
 
 .dashboard-main {
-  margin-left: 250px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: var(--light-gray);
-  min-height: 100vh;
+  background: transparent;
+  min-height: calc(100vh - 16px);
+  margin-left: 16px;
 }
 
 .dashboard-header {
