@@ -1,18 +1,28 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: #f5f7fa;
-  --foreground: #171717;
-  --primary-green: #26a69a;
-  --primary-green-hover: #00695c;
-  --light-gray: #f8f9fa;
-  --medium-gray: #e9ecef;
-  --dark-gray: #495057;
+  --BG: #F4F5FB;
+  --Secondary-Text: #828282;
+  --White: #FFF;
+  --Branding: #288474;
+  --Black: #000;
+  --Sec-Color: #A2EBC1;
+  --Purple-2: #BB6BD9;
+
+  /* Legacy variables for compatibility */
+  --background: #F4F5FB;
+  --foreground: #000000;
+  --primary-green: #288474;
+  --primary-green-hover: #1f6b5c;
+  --light-gray: #F4F5FB;
+  --medium-gray: #828282;
+  --dark-gray: #828282;
   --white: #ffffff;
   --black: #000000;
-  --border-radius: 8px;
-  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 8px 16px 0 rgba(0, 0, 0, 0.12);
 }
 
 @theme inline {
