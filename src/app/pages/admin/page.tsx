@@ -18,7 +18,6 @@ export default function AdminLoginPage() {
       <AdminHeader />
 
       <main className="login-main">
-        <BackgroundIllustrations variant="login" />
         <AdminLoginForm onSubmit={handleLogin} />
       </main>
 
