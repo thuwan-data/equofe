@@ -896,27 +896,34 @@ body {
 }
 
 .card-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--medium-gray);
+  padding: 17px 22px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .card-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--foreground);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
 }
 
 .filter-button {
-  background: none;
-  border: 1px solid var(--medium-gray);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
+  display: flex;
+  height: 40px;
+  padding: 15px 19.167px;
+  justify-content: center;
+  align-items: center;
+  gap: 8.333px;
+  border-radius: 916.667px;
+  border: 0.833px solid var(--Branding);
+  background: var(--White);
   cursor: pointer;
-  font-size: 0.875rem;
-  color: var(--dark-gray);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Branding);
+  font-family: 'Inter', sans-serif;
 }
 
 .filter-button:hover {
@@ -924,7 +931,9 @@ body {
 }
 
 .classes-card {
-  height: fit-content;
+  width: 824px;
+  height: 925px;
+  padding: 17px 22px;
 }
 
 .classes-list {
