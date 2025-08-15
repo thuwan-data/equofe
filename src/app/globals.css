@@ -543,35 +543,37 @@ body {
 .leaf-large-5 { transform: rotate(0deg); left: -10px; top: -35px; }
 
 .forgot-password-form-container {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
   position: relative;
+  width: 100%;
 }
 
 .forgot-password-form-card {
-  background: var(--white);
+  background: var(--White);
   padding: 3rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .back-button {
   display: inline-flex;
   align-items: center;
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .back-button:hover {
-  color: var(--primary-green);
+  color: var(--Branding);
 }
 
 .forgot-password-content {
