@@ -76,12 +76,14 @@ export default function AdminStudentsChart({
         <div className="chart-legend">
           {data.map((item) => (
             <div key={item.label} className="legend-item">
-              <div 
+              <div
                 className="legend-color"
                 style={{ backgroundColor: item.color }}
               ></div>
-              <span className="legend-label">{item.label}</span>
-              <span className="legend-value">{item.percentage}%</span>
+              <div className="legend-content">
+                <div className="legend-label">{item.label}</div>
+                <div className="legend-value">{item.percentage}%</div>
+              </div>
             </div>
           ))}
         </div>
