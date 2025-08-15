@@ -7,8 +7,8 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to admin login page
-    router.push('/pages/admin');
+    // Redirect to admin dashboard to show updates
+    router.push('/pages/admin/dashboard');
   }, [router]);
 
   return (
