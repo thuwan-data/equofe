@@ -147,12 +147,12 @@ export default function AdminSidebar({
       <nav className="sidebar-nav">
         <ul className="nav-list">
           {navigationItems.map((item) => (
-            <li 
+            <li
               key={item.id}
               className={`nav-item ${activeItem === item.id ? 'nav-item-active' : ''}`}
               onClick={() => handleItemClick(item.id)}
             >
-              <span className="nav-icon">{item.icon}</span>
+              <div className="nav-icon">{item.icon}</div>
               {!isCollapsed && <span className="nav-text">{item.label}</span>}
             </li>
           ))}
@@ -162,12 +162,12 @@ export default function AdminSidebar({
       <div className="sidebar-footer">
         <ul className="footer-nav">
           {footerItems.map((item) => (
-            <li 
+            <li
               key={item.id}
               className="nav-item"
               onClick={() => handleItemClick(item.id)}
             >
-              <span className="nav-icon">{item.icon}</span>
+              <div className="nav-icon">{item.icon}</div>
               {!isCollapsed && <span className="nav-text">{item.label}</span>}
             </li>
           ))}
