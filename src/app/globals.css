@@ -812,55 +812,68 @@ body {
 }
 
 .stats-section {
-  padding: 2rem;
+  padding: 0;
+  margin-bottom: 24px;
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 16.6px;
+  height: 110px;
 }
 
 .stat-card {
-  background: var(--white);
-  padding: 1.5rem;
+  background: var(--White);
+  padding: 22px 21px;
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 14px;
   box-shadow: var(--shadow);
+  width: 315px;
+  height: 110px;
+  flex-shrink: 0;
 }
 
 .stat-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  color: var(--white);
+  background: var(--Branding);
+  padding: 15px;
 }
 
-.stat-icon-teachers { background: #26a69a; }
-.stat-icon-students { background: #42a5f5; }
-.stat-icon-inclusive { background: #66bb6a; }
-.stat-icon-classes { background: #ffa726; }
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  fill: none;
+}
 
 .stat-content {
   display: flex;
   flex-direction: column;
+  gap: 1px;
 }
 
 .stat-number {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--foreground);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
+  line-height: normal;
 }
 
 .stat-label {
-  font-size: 0.875rem;
-  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
+  line-height: normal;
 }
 
 .content-section {
