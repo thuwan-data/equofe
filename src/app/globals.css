@@ -285,21 +285,24 @@ body {
 .form-label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--dark-gray);
+  color: var(--Secondary-Text);
+  font-family: 'Inter', sans-serif;
 }
 
 .form-input {
   padding: 0.75rem;
-  border: 1px solid var(--medium-gray);
+  border: 1px solid var(--Secondary-Text);
   border-radius: var(--border-radius);
   font-size: 1rem;
   transition: border-color 0.2s;
-  background: #f8f9fa;
+  background: var(--White);
+  font-family: 'Inter', sans-serif;
+  color: var(--Black);
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary-green);
+  border-color: var(--Branding);
 }
 
 .password-input-container {
