@@ -20,23 +20,21 @@ export default function AdminForgotPasswordPage() {
       <AdminHeader />
 
       <main className="forgot-password-main">
-        <BackgroundIllustrations variant="forgot-password" />
-
         <div className="forgot-password-form-container">
           <div className="forgot-password-form-card">
             <Link href="/pages/admin" className="back-button">
               ← Forgot Password
             </Link>
-            
+
             <div className="forgot-password-content">
               <p className="forgot-password-description">
-                Please submit your request to the system administrator. 
-                You'll receive an email with instructions to reset/recover 
+                Please submit your request to the system administrator.
+                You'll receive an email with instructions to reset/recover
                 your password.
               </p>
-              
+
               <p className="forgot-password-support">
-                If you are facing any technical issues, please contact the 
+                If you are facing any technical issues, please contact the
                 support team.
               </p>
 
