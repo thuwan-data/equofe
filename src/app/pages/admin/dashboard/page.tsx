@@ -36,7 +36,7 @@ export default function AdminDashboardPage() {
 
   // Custom stats data
   const statsData = [
-    { id: 'teachers', icon: '👨‍🏫', number: 24, label: 'Total Teachers', bgColor: '#26a69a' },
+    { id: 'teachers', icon: '���‍🏫', number: 24, label: 'Total Teachers', bgColor: '#26a69a' },
     { id: 'students', icon: '👥', number: 524, label: 'Total Students', bgColor: '#42a5f5' },
     { id: 'inclusive', icon: '🤝', number: 89, label: 'Total Inclusive Students', bgColor: '#66bb6a' },
     { id: 'classes', icon: '📚', number: 24, label: 'Total Classes', bgColor: '#ffa726' }
@@ -44,12 +44,12 @@ export default function AdminDashboardPage() {
 
   // Custom class schedule data
   const todaysClasses = [
-    { id: '1', number: 1, subject: 'Mathematics', code: 'MTH18', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-    { id: '2', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-    { id: '3', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-    { id: '4', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-    { id: '5', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
-    { id: '6', number: 2, subject: 'Physics', code: 'PHY12', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' }
+    { id: '1', number: 1, subject: 'Mathematics', code: '7MTH5', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+    { id: '2', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+    { id: '3', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+    { id: '4', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+    { id: '5', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' },
+    { id: '6', number: 2, subject: 'Physics', code: '5PHY2', time: '08:00-09:30', date: '12th July 2024', year: '6', classType: 'Class List' }
   ];
 
   // Custom chart data
