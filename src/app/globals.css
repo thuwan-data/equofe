@@ -671,6 +671,7 @@ body {
 .brand-logo-dashboard {
   display: flex;
   flex-direction: column;
+  filter: brightness(0) invert(1);
 }
 
 .brand-text-dashboard {
@@ -701,6 +702,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
+  overflow: hidden;
 }
 
 .nav-item {
@@ -781,7 +783,7 @@ body {
 
 .search-container {
   flex: 1;
-  max-width: 1230px;
+  max-width: 1310px;
 }
 
 .search-input-wrapper {
@@ -1050,7 +1052,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   height: 36px;
-  width: 89.143px;
+  width: 95px;
   display: flex;
   justify-content: center;
   align-items: center;
