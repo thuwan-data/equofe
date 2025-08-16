@@ -7,8 +7,8 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to admin dashboard to show updates
-    router.push('/pages/admin/dashboard');
+    // Redirect to teachers page to show new responsive design
+    router.push('/pages/admin/teachers');
   }, [router]);
 
   return (
