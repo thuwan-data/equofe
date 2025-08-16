@@ -121,6 +121,26 @@ export default function AdminSidebar({
     if (onItemClick) {
       onItemClick(itemId);
     }
+
+    // Navigate to different pages based on selection
+    if (typeof window !== 'undefined') {
+      switch (itemId) {
+        case 'dashboard':
+          window.location.href = '/pages/admin/dashboard';
+          break;
+        case 'teachers':
+          window.location.href = '/pages/admin/teachers';
+          break;
+        case 'classes':
+          window.location.href = '/pages/admin/classes';
+          break;
+        case 'students':
+          window.location.href = '/pages/admin/students';
+          break;
+        default:
+          break;
+      }
+    }
   };
 
   return (
