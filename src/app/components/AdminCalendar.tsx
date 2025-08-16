@@ -150,6 +150,10 @@ export default function AdminCalendar({
                 {day}
               </div>
             ))}
+            <div className="calendar-day weekend">1</div>
+            <div className="calendar-day weekend">2</div>
+            <div className="calendar-day weekend">3</div>
+            <div className="calendar-day weekend">4</div>
           </div>
         </div>
       </div>
