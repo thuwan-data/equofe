@@ -1,0 +1,32 @@
+<svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="plant">
+    <!-- Pot -->
+    <path d="M25 75 L55 75 L50 95 L30 95 Z" fill="#d84315"/>
+    <ellipse cx="40" cy="75" rx="15" ry="3" fill="#bf360c"/>
+    <rect x="32" y="93" width="16" height="4" rx="2" fill="#8d4e00"/>
+    
+    <!-- Soil -->
+    <ellipse cx="40" cy="75" rx="12" ry="2" fill="#5d4037"/>
+    
+    <!-- Main stem -->
+    <line x1="40" y1="75" x2="40" y2="45" stroke="#2e7d32" stroke-width="2"/>
+    
+    <!-- Large leaves -->
+    <path d="M20 50 Q15 35 25 30 Q35 35 40 45 Q35 55 25 50 Q15 55 20 50 Z" fill="#4caf50"/>
+    <path d="M60 55 Q65 40 55 35 Q45 40 40 50 Q45 60 55 55 Q65 60 60 55 Z" fill="#4caf50"/>
+    <path d="M35 25 Q25 15 35 10 Q45 15 45 25 Q45 35 35 30 Q25 35 35 25 Z" fill="#4caf50"/>
+    
+    <!-- Medium leaves -->
+    <path d="M25 40 Q20 30 28 28 Q36 32 38 40 Q34 48 28 45 Q20 48 25 40 Z" fill="#66bb6a"/>
+    <path d="M55 45 Q60 35 52 33 Q44 37 42 45 Q46 53 52 50 Q60 53 55 45 Z" fill="#66bb6a"/>
+    
+    <!-- Small leaves -->
+    <path d="M30 35 Q28 30 32 29 Q36 31 37 35 Q35 39 32 38 Q28 39 30 35 Z" fill="#81c784"/>
+    <path d="M50 40 Q52 35 48 34 Q44 36 43 40 Q45 44 48 43 Q52 44 50 40 Z" fill="#81c784"/>
+    
+    <!-- Leaf veins -->
+    <line x1="25" y1="40" x2="32" y2="42" stroke="#2e7d32" stroke-width="0.5" opacity="0.7"/>
+    <line x1="35" y1="25" x2="40" y2="27" stroke="#2e7d32" stroke-width="0.5" opacity="0.7"/>
+    <line x1="55" y1="45" x2="48" y2="47" stroke="#2e7d32" stroke-width="0.5" opacity="0.7"/>
+  </g>
+</svg>
