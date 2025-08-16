@@ -674,6 +674,7 @@ body {
 .brand-logo-dashboard {
   display: flex;
   flex-direction: column;
+  filter: brightness(0) invert(1);
 }
 
 .brand-text-dashboard {
@@ -681,6 +682,7 @@ body {
   font-weight: bold;
   color: var(--White);
   line-height: 1;
+  overflow: hidden;
 }
 
 .brand-tagline-dashboard {
@@ -787,7 +789,7 @@ body {
 
 .search-container {
   flex: 1;
-  max-width: 85%;
+  max-width: 95%;
 }
 
 .search-input-wrapper {
