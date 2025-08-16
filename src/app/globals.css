@@ -967,9 +967,10 @@ body {
 }
 
 .classes-card {
-  width: 824px;
-  height: 925px;
-  padding: 17px 22px;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  box-sizing: border-box;
 }
 
 .classes-list {
