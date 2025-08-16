@@ -109,7 +109,24 @@ export default function TeachersPage() {
   };
 
   const handleAddTeacher = () => {
+    setSelectedTeacher(null);
     setShowAddForm(true);
+  };
+
+  const handleEditTeacher = (teacher: Teacher) => {
+    setSelectedTeacher(teacher);
+    setShowProfile(false);
+    setShowAddForm(true);
+  };
+
+  const handleDeleteTeacher = (teacherId: string) => {
+    console.log('Delete teacher:', teacherId);
+    setShowProfile(false);
+  };
+
+  const handleSaveTeacher = (teacher: Teacher) => {
+    console.log('Save teacher:', teacher);
+    setShowAddForm(false);
   };
 
   const filteredTeachers = teachers.filter(teacher =>
