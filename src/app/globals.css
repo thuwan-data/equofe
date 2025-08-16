@@ -1071,13 +1071,15 @@ body {
 .right-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 463px;
+  gap: 2%;
+  width: 100%;
+  height: 100%;
 }
 
 .calendar-card {
-  width: 463px;
-  height: 342px;
+  width: 100%;
+  height: 45%;
+  min-height: 300px;
 }
 
 .calendar-button {
@@ -1154,8 +1156,9 @@ body {
 }
 
 .students-card {
-  width: 463px;
-  height: 466px;
+  width: 100%;
+  height: 53%;
+  min-height: 350px;
 }
 
 .chart-container {
