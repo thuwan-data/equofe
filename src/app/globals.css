@@ -2295,6 +2295,62 @@ body {
     gap: 1%;
     align-items: flex-start;
   }
+
+  /* Teachers page mobile styles */
+  .teachers-header {
+    flex-direction: column;
+    gap: 2%;
+    align-items: stretch;
+  }
+
+  .teachers-actions {
+    justify-content: center;
+  }
+
+  .teachers-table-container {
+    overflow-x: auto;
+  }
+
+  .teachers-table {
+    min-width: 800px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 2%;
+    text-align: center;
+  }
+
+  /* Modal responsive styles */
+  .teacher-profile-modal,
+  .add-edit-teacher-modal {
+    width: 95%;
+    margin: 2%;
+    max-height: 95vh;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 3%;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 3%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-input {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
