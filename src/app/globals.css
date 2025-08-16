@@ -647,19 +647,22 @@ body {
 .dashboard-container {
   display: flex;
   min-height: 100vh;
+  width: 100vw;
   background: var(--BG);
-  padding: 8px;
-  gap: 0;
+  padding: 0.5%;
+  gap: 1%;
+  box-sizing: border-box;
 }
 
 .dashboard-sidebar {
-  width: 354px;
+  width: 22%;
+  min-width: 280px;
   background: var(--Black);
   color: var(--White);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  height: calc(100vh - 16px);
+  height: calc(100vh - 1%);
   position: relative;
   flex-shrink: 0;
 }
