@@ -252,6 +252,23 @@ export default function TeachersPage() {
           </div>
         </section>
       </main>
+
+      {/* Teacher Profile Modal */}
+      <TeacherProfile
+        teacher={selectedTeacher}
+        isOpen={showProfile}
+        onClose={() => setShowProfile(false)}
+        onEdit={handleEditTeacher}
+        onDelete={handleDeleteTeacher}
+      />
+
+      {/* Add/Edit Teacher Modal */}
+      <AddEditTeacher
+        teacher={selectedTeacher}
+        isOpen={showAddForm}
+        onClose={() => setShowAddForm(false)}
+        onSave={handleSaveTeacher}
+      />
     </div>
   );
 }
