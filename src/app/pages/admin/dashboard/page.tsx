@@ -49,8 +49,8 @@ export default function AdminDashboardPage() {
 
   // Custom chart data
   const studentsChartData = [
-    { label: 'Non-Inclusive', value: 435, percentage: 74, color: '#26a69a' },
-    { label: 'Inclusive Students', value: 89, percentage: 26, color: '#4dd0e1' }
+    { label: 'Non-Inclusive', value: 435, percentage: 74, color: '#288474' },
+    { label: 'Inclusive Students', value: 89, percentage: 26, color: '#A2EBC1' }
   ];
 
   return (
