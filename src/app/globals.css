@@ -774,18 +774,20 @@ body {
 
 .dashboard-header {
   background: transparent;
-  padding: 0;
+  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 14px;
+  gap: 2%;
   height: 67px;
-  margin-bottom: 24px;
+  margin-bottom: 2%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .search-container {
   flex: 1;
-  max-width: 1230px;
+  max-width: 85%;
 }
 
 .search-input-wrapper {
@@ -795,8 +797,10 @@ body {
   background: var(--White);
   border: 1px solid var(--Secondary-Text);
   border-radius: var(--border-radius);
-  padding: 21px 18px;
+  padding: 1.5% 2%;
   height: 67px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .search-icon {
