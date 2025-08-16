@@ -1611,6 +1611,324 @@ body {
   border-color: var(--Branding);
 }
 
+/* ===== TEACHER PROFILE MODAL STYLES ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2%;
+}
+
+.teacher-profile-modal {
+  background: var(--White);
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  background: var(--White);
+  z-index: 10;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--Secondary-Text);
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background: #f0f0f0;
+}
+
+.modal-content {
+  padding: 3%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-bottom: 3%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--Branding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--White);
+  font-weight: 700;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--Black);
+  margin: 0 0 8px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.profile-id {
+  font-size: 16px;
+  color: var(--Secondary-Text);
+  margin: 0 0 4px 0;
+  font-weight: 500;
+}
+
+.profile-standard {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  margin: 0;
+}
+
+.profile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.profile-section {
+  background: #f8f9fa;
+  padding: 2%;
+  border-radius: var(--border-radius);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0 0 2% 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5%;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1%;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: var(--Black);
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.subjects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subject-badge {
+  background: var(--Branding);
+  color: var(--White);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.account-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  margin-top: 2%;
+}
+
+.action-link {
+  background: none;
+  border: none;
+  color: var(--Branding);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  padding: 8px 0;
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+}
+
+.action-link:hover {
+  color: var(--primary-green-hover);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  margin-top: 3%;
+  padding-top: 2%;
+  border-top: 1px solid #f0f0f0;
+}
+
+.edit-details-btn {
+  background: var(--Branding);
+  color: var(--White);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.edit-details-btn:hover {
+  background: var(--primary-green-hover);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: var(--White);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.deactivate-btn {
+  background: #6c757d;
+  color: var(--White);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.deactivate-btn:hover {
+  background: #5a6268;
+}
+
+.confirm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+}
+
+.confirm-modal {
+  background: var(--White);
+  padding: 3%;
+  border-radius: var(--border-radius);
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+}
+
+.confirm-modal h3 {
+  margin: 0 0 2% 0;
+  color: var(--Black);
+  font-family: 'Inter', sans-serif;
+}
+
+.confirm-modal p {
+  margin: 0 0 3% 0;
+  color: var(--Secondary-Text);
+  font-family: 'Inter', sans-serif;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: var(--White);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.confirm-delete-btn {
+  background: #dc3545;
+  color: var(--White);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablet view */
