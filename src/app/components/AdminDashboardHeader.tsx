@@ -56,11 +56,6 @@ export default function AdminDashboardHeader({
             <span>👤</span>
           )}
         </div>
-<<<<<<< HEAD
-        <span className="user-name">{userName}</span>
-=======
-        {/* <span className="user-name">{userName}</span> */}
->>>>>>> refs/remotes/origin/main
       </div>
     </header>
   );
