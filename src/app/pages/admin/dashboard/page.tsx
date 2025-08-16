@@ -36,7 +36,11 @@ export default function AdminDashboardPage() {
 
   // Custom stats data
   const statsData = [
+<<<<<<< HEAD
     { id: 'teachers', icon: '���‍🏫', number: 24, label: 'Total Teachers', bgColor: '#26a69a' },
+=======
+    { id: 'teachers', icon: '🏫', number: 24, label: 'Total Teachers', bgColor: '#26a69a' },
+>>>>>>> refs/remotes/origin/main
     { id: 'students', icon: '👥', number: 524, label: 'Total Students', bgColor: '#42a5f5' },
     { id: 'inclusive', icon: '🤝', number: 89, label: 'Total Inclusive Students', bgColor: '#66bb6a' },
     { id: 'classes', icon: '📚', number: 24, label: 'Total Classes', bgColor: '#ffa726' }

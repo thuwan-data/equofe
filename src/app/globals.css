@@ -671,6 +671,10 @@ body {
 .brand-logo-dashboard {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  filter: brightness(0) invert(1);
+>>>>>>> refs/remotes/origin/main
 }
 
 .brand-text-dashboard {
@@ -701,6 +705,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+>>>>>>> refs/remotes/origin/main
 }
 
 .nav-item {
@@ -781,7 +789,11 @@ body {
 
 .search-container {
   flex: 1;
+<<<<<<< HEAD
   max-width: 1230px;
+=======
+  max-width: 1310px;
+>>>>>>> refs/remotes/origin/main
 }
 
 .search-input-wrapper {
@@ -1050,7 +1062,11 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   height: 36px;
+<<<<<<< HEAD
   width: 89.143px;
+=======
+  width: 95px;
+>>>>>>> refs/remotes/origin/main
   display: flex;
   justify-content: center;
   align-items: center;
