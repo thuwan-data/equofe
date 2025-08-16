@@ -66,7 +66,7 @@ export default function AdminDashboardPage() {
           onSearch={handleSearch}
         />
 
-        <AdminStatsCards stats={statsData} />
+        <AdminStatsCards />
 
         <section className="content-section">
           <div className="content-grid">
