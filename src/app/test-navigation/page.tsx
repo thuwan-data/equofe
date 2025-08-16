@@ -8,6 +8,22 @@ export default function TestNavigationPage() {
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem' }}>
         <Link
+          href="/pages/admin/teachers"
+          style={{
+            padding: '1rem',
+            background: '#288474',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '12px',
+            textAlign: 'center',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: '600'
+          }}
+        >
+          👥 Teachers Page (NEW - Fully Responsive)
+        </Link>
+
+        <Link
           href="/pages/admin/dashboard"
           style={{
             padding: '1rem',
@@ -20,7 +36,7 @@ export default function TestNavigationPage() {
             fontWeight: '600'
           }}
         >
-          📊 Updated Admin Dashboard (Figma Design)
+          📊 Admin Dashboard (Responsive Figma Design)
         </Link>
 
         <Link
@@ -35,7 +51,7 @@ export default function TestNavigationPage() {
             fontFamily: 'Inter, sans-serif'
           }}
         >
-          🔐 Admin Login Page (Centered)
+          🔐 Admin Login Page (Centered & Responsive)
         </Link>
 
         <Link
@@ -50,7 +66,7 @@ export default function TestNavigationPage() {
             fontFamily: 'Inter, sans-serif'
           }}
         >
-          🔑 Forgot Password Page (Centered)
+          🔑 Forgot Password Page (Centered & Responsive)
         </Link>
 
         <Link
@@ -65,7 +81,7 @@ export default function TestNavigationPage() {
             fontFamily: 'Inter, sans-serif'
           }}
         >
-          🏠 Home Page (redirects to dashboard)
+          🏠 Home Page (redirects to teachers)
         </Link>
       </div>
       
