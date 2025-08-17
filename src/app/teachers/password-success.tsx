@@ -80,12 +80,17 @@ export default function TeacherPasswordSuccessPage() {
       </div>
 
       <div className="auth-right-section">
-        <div className="feature-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F1019ceb1af3d4bf0afecb4d455955167?format=webp&width=800"
+          alt="Success background"
+          className="auth-background-image"
+        />
+        <div className="auth-overlay-content">
           <div className="feature-icons">
             <div className="feature-icon graduation-cap">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 25L35 18.75L20 12.5L5 18.75L20 25Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M10 22.5V30C10 31.3261 10.5268 32.5979 11.4645 33.5355C12.4021 34.4732 13.6739 35 15 35H25C26.3261 35 27.5979 34.4732 28.5355 33.5355C29.4732 32.5979 30 31.3261 30 30V22.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 22.5V30C10 31.3261 10.5268 32.5979 11.4645 33.5355C12.4021 34.4732 13.6739 35 15 35H25C26.3261 35 27-5979 34.4732 28.5355 33.5355C29.4732 32.5979 30 31.3261 30 30V22.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
             <div className="feature-icon tablet">
@@ -98,14 +103,6 @@ export default function TeacherPasswordSuccessPage() {
           <h2 className="feature-title">
             This section is intentionally created to add the features of the platform and system
           </h2>
-        </div>
-        
-        <div className="teacher-illustration">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F80d0adc184cf44e4b8e89700920e9294?format=webp&width=800"
-            alt="Professional teacher with books"
-            className="teacher-image"
-          />
         </div>
       </div>
     </div>
