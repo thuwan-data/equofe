@@ -89,7 +89,7 @@ export default function TimetablePage() {
       id: '1',
       title: 'Big Day and Celebration Day',
       time: '',
-      type: 'event',
+      type: 'presentation',
       description: '',
       color: '#BB6BD9'
     },
