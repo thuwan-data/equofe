@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 interface Student {
-  id?: string;
+  id: string;
   name: string;
   studentId: string;
   class: string;
