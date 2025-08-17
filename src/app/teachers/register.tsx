@@ -128,7 +128,11 @@ export default function TeacherRegisterPage() {
               </svg>
             </button>
             <h1 className="auth-title">
-              {currentStep === 1 ? 'Register to Get Started' : 'Personal Information'}
+              {currentStep === 1 && 'Register to Get Started'}
+              {currentStep === 2 && 'Personal Information'}
+              {currentStep === 3 && 'Profile Photo'}
+              {currentStep === 4 && 'Education'}
+              {currentStep === 5 && 'Your Profile is complete.'}
             </h1>
           </div>
 
