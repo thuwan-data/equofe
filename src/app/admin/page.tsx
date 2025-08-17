@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import AdminSidebar from '../../components/AdminSidebar';
-import AdminDashboardHeader from '../../components/AdminDashboardHeader';
-import AdminCalendar from '../../components/AdminCalendar';
-import AdminClassSchedule from '../../components/AdminClassSchedule';
+import AdminSidebar from '../components/AdminSidebar';
+import AdminDashboardHeader from '../components/AdminDashboardHeader';
+import AdminCalendar from '../components/AdminCalendar';
+import AdminClassSchedule from '../components/AdminClassSchedule';
 
 export default function DashboardPage() {
   const [activeNavItem, setActiveNavItem] = useState('dashboard');

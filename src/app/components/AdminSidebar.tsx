@@ -126,19 +126,19 @@ export default function AdminSidebar({
     if (typeof window !== 'undefined') {
       switch (itemId) {
         case 'dashboard':
-          window.location.href = '/pages/admin/dashboard';
+          window.location.href = '/admin';
           break;
         case 'teachers':
-          window.location.href = '/pages/admin/teachers';
+          window.location.href = '/admin/teachers';
           break;
         case 'classes':
-          window.location.href = '/pages/admin/classes';
+          window.location.href = '/admin/classes';
           break;
         case 'students':
-          window.location.href = '/pages/admin/students';
+          window.location.href = '/admin/students';
           break;
         case 'timetable':
-          window.location.href = '/pages/admin/timetable';
+          window.location.href = '/admin/timetable';
           break;
         default:
           break;
