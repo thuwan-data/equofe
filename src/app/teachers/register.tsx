@@ -19,7 +19,13 @@ export default function TeacherRegisterPage() {
     gender: 'Male',
     dateOfBirth: '',
     countryOfBirth: 'United States',
-    countryOfResidence: 'Select'
+    countryOfResidence: 'Select',
+    // Step 3: Profile Photo
+    profilePhoto: null as File | null,
+    // Step 4: Education
+    specializedArea: 'Elementary',
+    yearGroups: 'Early Years 1, Early Years 2',
+    subjects: 'Mathematics, English'
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -45,6 +51,21 @@ export default function TeacherRegisterPage() {
     }
 
     if (currentStep === 2) {
+      setCurrentStep(3);
+      return;
+    }
+
+    if (currentStep === 3) {
+      setCurrentStep(4);
+      return;
+    }
+
+    if (currentStep === 4) {
+      setCurrentStep(5);
+      return;
+    }
+
+    if (currentStep === 5) {
       setIsLoading(true);
 
       // Simulate registration process
@@ -53,8 +74,8 @@ export default function TeacherRegisterPage() {
       console.log('Teacher registration complete:', formData);
       setIsLoading(false);
 
-      // Redirect to login after successful registration
-      window.location.href = '/teachers/login';
+      // Redirect to teacher dashboard after successful registration
+      window.location.href = '/teachers/dashboard';
     }
   };
 
@@ -107,7 +128,11 @@ export default function TeacherRegisterPage() {
               </svg>
             </button>
             <h1 className="auth-title">
-              {currentStep === 1 ? 'Register to Get Started' : 'Personal Information'}
+              {currentStep === 1 && 'Register to Get Started'}
+              {currentStep === 2 && 'Personal Information'}
+              {currentStep === 3 && 'Profile Photo'}
+              {currentStep === 4 && 'Education'}
+              {currentStep === 5 && 'Your Profile is complete.'}
             </h1>
           </div>
 
@@ -358,6 +383,159 @@ export default function TeacherRegisterPage() {
                   disabled={isLoading}
                 >
                   {isLoading ? 'Saving...' : 'Save & Continue'}
+                </button>
+              </>
+            )}
+
+            {currentStep === 3 && (
+              <>
+                <div className="profile-photo-section">
+                  <div className="photo-upload-area">
+                    <div className="upload-placeholder">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 8H12C10.8954 8 10 8.89543 10 10V38C10 39.1046 10.8954 40 12 40H36C37.1046 40 38 39.1046 38 38V18L28 8Z" stroke="#288474" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M28 8V18H38" stroke="#288474" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M30 26L24 32L18 26" stroke="#288474" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M24 32V20" stroke="#288474" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <p>JPG, PNG</p>
+                      <p>Max 5 mb size</p>
+                    </div>
+                  </div>
+
+                  <div className="user-info">
+                    <h3>{formData.firstName} S <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" /></h3>
+                    <p>Age: 31</p>
+                    <p>Spoken English (Native)</p>
+                  </div>
+
+                  <button type="button" className="upload-photo-btn">
+                    Upload Photo
+                  </button>
+
+                  <div className="photo-guidelines">
+                    <h4>What you photo needs</h4>
+                    <div className="guidelines-list">
+                      <div className="guideline-item">
+                        <span className="checkmark">✓</span>
+                        <span>You should be facing forward</span>
+                      </div>
+                      <div className="guideline-item">
+                        <span className="checkmark">✓</span>
+                        <span>Frame your head and shoulders</span>
+                      </div>
+                      <div className="guideline-item">
+                        <span className="checkmark">✓</span>
+                        <span>You should be centered and upright</span>
+                      </div>
+                      <div className="guideline-item">
+                        <span className="checkmark">✓</span>
+                        <span>You should be the only person in the photo</span>
+                      </div>
+                      <div className="guideline-item">
+                        <span className="checkmark">✓</span>
+                        <span>Use a color photo with high resolution and no filters</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="auth-submit-btn continue-btn"
+                  disabled={isLoading}
+                >
+                  Save & Continue
+                </button>
+              </>
+            )}
+
+            {currentStep === 4 && (
+              <>
+                <div className="form-group">
+                  <label htmlFor="specializedArea" className="form-label">Which area do you specialize in?</label>
+                  <select
+                    id="specializedArea"
+                    value={formData.specializedArea}
+                    onChange={(e) => handleInputChange('specializedArea', e.target.value)}
+                    className="form-input form-select"
+                    required
+                  >
+                    <option value="Elementary">Elementary</option>
+                    <option value="Secondary">Secondary</option>
+                    <option value="High School">High School</option>
+                    <option value="Special Education">Special Education</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="yearGroups" className="form-label">What year groups do you teach?</label>
+                  <select
+                    id="yearGroups"
+                    value={formData.yearGroups}
+                    onChange={(e) => handleInputChange('yearGroups', e.target.value)}
+                    className="form-input form-select"
+                    required
+                  >
+                    <option value="Early Years 1, Early Years 2">Early Years 1, Early Years 2</option>
+                    <option value="Year 1, Year 2">Year 1, Year 2</option>
+                    <option value="Year 3, Year 4">Year 3, Year 4</option>
+                    <option value="Year 5, Year 6">Year 5, Year 6</option>
+                    <option value="Year 7, Year 8">Year 7, Year 8</option>
+                    <option value="Year 9, Year 10">Year 9, Year 10</option>
+                    <option value="Year 11, Year 12">Year 11, Year 12</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="subjects" className="form-label">What subjects you teach?</label>
+                  <select
+                    id="subjects"
+                    value={formData.subjects}
+                    onChange={(e) => handleInputChange('subjects', e.target.value)}
+                    className="form-input form-select"
+                    required
+                  >
+                    <option value="Mathematics, English">Mathematics, English</option>
+                    <option value="Science, Mathematics">Science, Mathematics</option>
+                    <option value="English, History">English, History</option>
+                    <option value="Arts, Music">Arts, Music</option>
+                    <option value="Physical Education">Physical Education</option>
+                    <option value="Special Education">Special Education</option>
+                  </select>
+                </div>
+
+                <button
+                  type="submit"
+                  className="auth-submit-btn continue-btn"
+                  disabled={isLoading}
+                >
+                  Save & Continue
+                </button>
+              </>
+            )}
+
+            {currentStep === 5 && (
+              <>
+                <div className="completion-section">
+                  <div className="success-icon">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="60" cy="60" r="60" fill="#A2EBC1"/>
+                      <path d="M40 60L50 70L80 40" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+
+                  <div className="completion-message">
+                    <p>Redirecting you to your home page</p>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="auth-submit-btn continue-btn"
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Setting up...' : 'Complete Registration'}
                 </button>
               </>
             )}
