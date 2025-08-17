@@ -3537,6 +3537,427 @@ body {
   font-size: 16px;
 }
 
+/* ===== TEACHER DASHBOARD STYLES ===== */
+.teacher-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--BG);
+  font-family: 'Inter', sans-serif;
+}
+
+.teacher-sidebar {
+  width: 280px;
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.sidebar-header {
+  padding: 1% 0 3% 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 3%;
+}
+
+.sidebar-logo {
+  filter: brightness(0) invert(1);
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+.nav-item, .footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3% 4%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.nav-item:hover, .footer-item:hover {
+  background: #333;
+}
+
+.nav-item.active {
+  background: var(--Branding);
+}
+
+.nav-icon {
+  font-size: 16px;
+  width: 20px;
+}
+
+.nav-label {
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #333;
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+.teacher-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.teacher-header {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2%;
+  margin-bottom: 2%;
+  box-shadow: var(--shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--Secondary-Text);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.notification-btn:hover {
+  background: var(--BG);
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--Black);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.profile-btn:hover {
+  background: var(--BG);
+}
+
+.stats-section {
+  margin-bottom: 2%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+
+.stat-card {
+  background: white;
+  padding: 3%;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1%;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  font-weight: 500;
+}
+
+.content-area {
+  flex: 1;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2%;
+  height: 100%;
+}
+
+.timetable-section, .right-column > div {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2%;
+  box-shadow: var(--shadow);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.section-header h2, .section-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+.header-btn, .calendar-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header-btn:hover, .calendar-btn:hover {
+  background: var(--BG);
+}
+
+.timetable-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Black);
+  margin-bottom: 2%;
+}
+
+.classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.class-card {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.class-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0 0 1% 0;
+}
+
+.class-level {
+  font-size: 14px;
+  color: var(--Purple-2);
+  margin: 0 0 2% 0;
+  font-weight: 500;
+}
+
+.class-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  font-size: 12px;
+  color: var(--Secondary-Text);
+}
+
+.class-meta span {
+  background: var(--BG);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.start-lesson {
+  background: var(--Sec-Color);
+  color: var(--Black);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-lesson:hover {
+  background: #8FD9A8;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.calendar-widget {
+  font-size: 12px;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1%;
+  margin-bottom: 2%;
+  font-weight: 600;
+  color: var(--Secondary-Text);
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1%;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-day:hover {
+  background: var(--BG);
+}
+
+.calendar-day.today {
+  background: var(--Branding);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-day.other-month {
+  color: #ccc;
+}
+
+.previous-classes-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Black);
+  margin-bottom: 2%;
+}
+
+.previous-classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.previous-class-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 3%;
+  padding: 2%;
+  border-radius: 8px;
+  background: var(--BG);
+}
+
+.class-tag {
+  background: var(--Branding);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.class-details p {
+  margin: 0.5% 0;
+  font-size: 12px;
+}
+
+.class-details strong {
+  font-weight: 600;
+  color: var(--Black);
+}
+
+.lesson-info {
+  color: var(--Secondary-Text);
+}
+
+.lesson-details {
+  color: var(--Branding);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .teacher-sidebar {
+    width: 240px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-dashboard {
+    flex-direction: column;
+  }
+
+  .teacher-sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* OTP Input Styles */
 .otp-input-container {
   display: flex;
