@@ -3,12 +3,16 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function TeacherLoginPage() {
+export default function TeacherRegisterPage() {
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
@@ -20,17 +24,26 @@ export default function TeacherLoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+    
     setIsLoading(true);
     
-    // Simulate login process
+    // Simulate registration process
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    console.log('Teacher login:', formData);
+    console.log('Teacher registration:', formData);
     setIsLoading(false);
+    
+    // Redirect to login after successful registration
+    window.location.href = '/teachers/login';
   };
 
-  const handleForgotPassword = () => {
-    window.location.href = '/teachers/forgot-password';
+  const handleBackToLogin = () => {
+    window.location.href = '/teachers/login';
   };
 
   return (
@@ -54,9 +67,48 @@ export default function TeacherLoginPage() {
             />
           </div>
 
-          <h1 className="auth-title">Login to your Equo Profile</h1>
+          <div className="auth-header">
+            <button 
+              type="button" 
+              className="back-button"
+              onClick={handleBackToLogin}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <h1 className="auth-title">Register to Get Started</h1>
+          </div>
 
           <form onSubmit={handleSubmit} className="auth-form">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="firstName" className="form-label">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  value={formData.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  placeholder="Moseed"
+                  className="form-input"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="lastName" className="form-label">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={formData.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  placeholder="Shahid"
+                  className="form-input"
+                  required
+                />
+              </div>
+            </div>
+
             <div className="form-group">
               <label htmlFor="email" className="form-label">Email Address</label>
               <input
@@ -64,7 +116,7 @@ export default function TeacherLoginPage() {
                 id="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                placeholder="moseed.shahid@tuic.pk"
+                placeholder="moseed.shahid@schoolmail.com"
                 className="form-input"
                 required
               />
@@ -104,29 +156,66 @@ export default function TeacherLoginPage() {
               </div>
             </div>
 
-            <button 
-              type="submit" 
-              className="auth-submit-btn"
-              disabled={isLoading}
-            >
-              {isLoading ? 'Logging in...' : 'Login'}
-            </button>
+            <div className="form-group">
+              <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+              <div className="password-input-wrapper">
+                <input
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  id="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
+                  placeholder="Re-Enter Password"
+                  className="form-input"
+                  required
+                />
+                <button
+                  type="button"
+                  className="password-toggle"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                >
+                  {showConfirmPassword ? (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94L17.94 17.94Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M1 1l22 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19L9.9 4.24Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ) : (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </div>
 
             <button 
-              type="button" 
-              className="forgot-password-link"
-              onClick={handleForgotPassword}
+              type="submit" 
+              className="auth-submit-btn register-btn"
+              disabled={isLoading}
             >
-              Forgot Password?
+              {isLoading ? 'Creating Account...' : 'Register'}
             </button>
+
+            <div className="auth-footer">
+              <span>Already have an account? </span>
+              <button 
+                type="button" 
+                className="auth-link"
+                onClick={handleBackToLogin}
+              >
+                Login here
+              </button>
+            </div>
           </form>
         </div>
       </div>
 
-      <div className="auth-right-section">
+      <div className="auth-right-section register-right">
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F1019ceb1af3d4bf0afecb4d455955167?format=webp&width=800"
-          alt="Login background"
+          alt="Registration background"
           className="auth-background-image"
         />
         <div className="auth-overlay-content">
