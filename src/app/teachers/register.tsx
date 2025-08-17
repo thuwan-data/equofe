@@ -4,12 +4,22 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export default function TeacherRegisterPage() {
+  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
+    // Step 1: Basic Registration
     firstName: '',
     lastName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    // Step 2: Personal Information
+    languageSpeak: 'English',
+    languageLevel: 'Native',
+    additionalLanguages: [] as string[],
+    gender: 'Male',
+    dateOfBirth: '',
+    countryOfBirth: 'United States',
+    countryOfResidence: 'Select'
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
