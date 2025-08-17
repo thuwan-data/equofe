@@ -2415,3 +2415,362 @@ body {
     font-size: 0.75rem;
   }
 }
+
+/* ===== CLASSES PAGE STYLES ===== */
+.classes-page-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 2%;
+}
+
+.classes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.classes-actions {
+  display: flex;
+  gap: 1.5%;
+  align-items: center;
+}
+
+.add-class-button {
+  background: var(--Branding);
+  color: var(--White);
+  border: none;
+  padding: 0.8% 2%;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.add-class-button:hover {
+  background: var(--primary-green-hover);
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2%;
+  margin-bottom: 3%;
+}
+
+.class-card {
+  background: var(--White);
+  border-radius: var(--border-radius);
+  padding: 2%;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #E8E8E8;
+}
+
+.class-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+}
+
+.class-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5%;
+}
+
+.class-subject {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+.class-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5%;
+  border-radius: 50%;
+  color: var(--Secondary-Text);
+  transition: background-color 0.2s ease;
+}
+
+.class-menu-btn:hover {
+  background: #F0F0F0;
+}
+
+.class-details {
+  margin-bottom: 2%;
+}
+
+.class-detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.class-schedule {
+  margin-bottom: 2%;
+  padding: 1.5% 0;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8%;
+  font-size: 0.85rem;
+}
+
+.schedule-item:last-child {
+  margin-bottom: 0;
+}
+
+.schedule-day {
+  font-weight: 500;
+  color: var(--Black);
+}
+
+.schedule-time {
+  color: var(--Secondary-Text);
+}
+
+.class-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--Secondary-Text);
+  margin-bottom: 0.5%;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Black);
+}
+
+.class-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5%;
+  border-top: 1px solid #E8E8E8;
+}
+
+.class-teacher {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.teacher-label {
+  font-size: 0.8rem;
+  color: var(--Secondary-Text);
+  margin-bottom: 0.2%;
+}
+
+.teacher-name {
+  font-weight: 500;
+  color: var(--Black);
+  font-size: 0.9rem;
+}
+
+.view-class-btn {
+  background: var(--Branding);
+  color: var(--White);
+  border: none;
+  padding: 0.8%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.view-class-btn:hover {
+  background: var(--primary-green-hover);
+}
+
+/* ===== STUDENTS PAGE SPECIFIC STYLES ===== */
+.students-page-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 2%;
+}
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.students-actions {
+  display: flex;
+  gap: 1.5%;
+  align-items: center;
+}
+
+.add-student-button {
+  background: var(--Branding);
+  color: var(--White);
+  border: none;
+  padding: 0.8% 2%;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.add-student-button:hover {
+  background: var(--primary-green-hover);
+}
+
+.students-table-container {
+  background: var(--White);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 2%;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th {
+  background: #F8F9FA;
+  padding: 1.2% 1.5%;
+  text-align: left;
+  font-weight: 600;
+  color: var(--Black);
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 0.9rem;
+}
+
+.students-table td {
+  padding: 1.2% 1.5%;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 0.9rem;
+}
+
+.students-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+  background: #F8F9FA;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.student-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--Branding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--White);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.student-name {
+  font-weight: 500;
+  color: var(--Black);
+}
+
+.student-id, .class, .dob, .phone {
+  color: var(--Secondary-Text);
+}
+
+.address {
+  color: var(--Secondary-Text);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== MODAL STYLES FOR STUDENTS ===== */
+.student-profile-modal, .add-edit-student-modal {
+  background: var(--White);
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.profile-class {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  margin: 0;
+}
+
+/* Additional responsive styles for new pages */
+@media (max-width: 1024px) {
+  .classes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5%;
+  }
+
+  .students-table-container {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-grid {
+    grid-template-columns: 1fr;
+    gap: 3%;
+  }
+
+  .students-table {
+    min-width: 800px;
+  }
+
+  .classes-header,
+  .students-header {
+    flex-direction: column;
+    gap: 2%;
+    align-items: stretch;
+  }
+
+  .classes-actions,
+  .students-actions {
+    justify-content: center;
+  }
+}
