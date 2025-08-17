@@ -146,7 +146,7 @@ export default function TeacherLoginPage() {
         
         <div className="teacher-illustration">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F245b420a37e84ae786485a689cfcfc48?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F80d0adc184cf44e4b8e89700920e9294?format=webp&width=800"
             alt="Professional teacher with books"
             className="teacher-image"
           />
