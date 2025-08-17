@@ -56,7 +56,6 @@ export default function AdminDashboardHeader({
             <span>👤</span>
           )}
         </div>
-        {/* <span className="user-name">{userName}</span> */}
       </div>
     </header>
   );

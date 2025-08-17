@@ -34,13 +34,8 @@ export default function AdminDashboardPage() {
     console.log('Date selected:', date);
   };
 
-  // Custom stats data
-  const statsData = [
-    { id: 'teachers', icon: '🏫', number: 24, label: 'Total Teachers', bgColor: '#26a69a' },
-    { id: 'students', icon: '👥', number: 524, label: 'Total Students', bgColor: '#42a5f5' },
-    { id: 'inclusive', icon: '🤝', number: 89, label: 'Total Inclusive Students', bgColor: '#66bb6a' },
-    { id: 'classes', icon: '📚', number: 24, label: 'Total Classes', bgColor: '#ffa726' }
-  ];
+  // Use default stats from AdminStatsCards component (which have the proper SVG icons)
+  // No need to override since we updated the component itself
 
   // Custom class schedule data
   const todaysClasses = [
@@ -54,8 +49,8 @@ export default function AdminDashboardPage() {
 
   // Custom chart data
   const studentsChartData = [
-    { label: 'Non-Inclusive', value: 435, percentage: 74, color: '#26a69a' },
-    { label: 'Inclusive Students', value: 89, percentage: 26, color: '#4dd0e1' }
+    { label: 'Non-Inclusive', value: 435, percentage: 74, color: '#288474' },
+    { label: 'Inclusive Students', value: 89, percentage: 26, color: '#A2EBC1' }
   ];
 
   return (
@@ -71,7 +66,7 @@ export default function AdminDashboardPage() {
           onSearch={handleSearch}
         />
 
-        <AdminStatsCards stats={statsData} />
+        <AdminStatsCards />
 
         <section className="content-section">
           <div className="content-grid">
