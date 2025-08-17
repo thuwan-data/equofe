@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import AdminSidebar from '../../../components/AdminSidebar';
-import AdminDashboardHeader from '../../../components/AdminDashboardHeader';
-import StudentProfile from '../../../components/StudentProfile';
-import AddEditStudent from '../../../components/AddEditStudent';
+import AdminSidebar from '../../components/AdminSidebar';
+import AdminDashboardHeader from '../../components/AdminDashboardHeader';
+import StudentProfile from '../../components/StudentProfile';
+import AddEditStudent from '../../components/AddEditStudent';
 
 interface Student {
   id: string;

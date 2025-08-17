@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import AdminSidebar from '../../../components/AdminSidebar';
-import AdminDashboardHeader from '../../../components/AdminDashboardHeader';
+import AdminSidebar from '../../components/AdminSidebar';
+import AdminDashboardHeader from '../../components/AdminDashboardHeader';
 
 interface ClassData {
   id: string;

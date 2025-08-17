@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import AdminSidebar from '../../../components/AdminSidebar';
-import AdminDashboardHeader from '../../../components/AdminDashboardHeader';
-import TeacherProfile from '../../../components/TeacherProfile';
-import AddEditTeacher from '../../../components/AddEditTeacher';
+import AdminSidebar from '../../components/AdminSidebar';
+import AdminDashboardHeader from '../../components/AdminDashboardHeader';
+import TeacherProfile from '../../components/TeacherProfile';
+import AddEditTeacher from '../../components/AddEditTeacher';
 
 interface Teacher {
   id: string;
