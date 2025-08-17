@@ -3132,3 +3132,480 @@ body {
     font-size: 12px;
   }
 }
+
+/* ===== TEACHER AUTHENTICATION STYLES ===== */
+.teacher-auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-left-section {
+  flex: 1;
+  background: var(--White);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 50%;
+}
+
+.auth-right-section {
+  flex: 1;
+  background: linear-gradient(135deg, #BB6BD9 0%, #288474 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.language-selector {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  cursor: pointer;
+}
+
+.auth-form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.brand-logo {
+  margin-bottom: 3%;
+}
+
+.auth-header {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--Secondary-Text);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background: #F0F0F0;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+  flex: 1;
+}
+
+.auth-description {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  text-align: left;
+  margin-bottom: 3%;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Black);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--Black);
+  background: #F8F9FA;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--Branding);
+  background: var(--White);
+}
+
+.form-input.error {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--Secondary-Text);
+  padding: 4px;
+}
+
+.auth-submit-btn {
+  background: var(--Branding);
+  color: var(--White);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background: var(--primary-green-hover);
+}
+
+.auth-submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: var(--Branding);
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 2%;
+  text-decoration: underline;
+}
+
+.forgot-password-link:hover {
+  color: var(--primary-green-hover);
+}
+
+/* OTP Input Styles */
+.otp-input-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.otp-input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  background: #F8F9FA;
+  color: var(--Black);
+  transition: border-color 0.2s ease;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: var(--Branding);
+  background: var(--White);
+}
+
+.resend-section {
+  text-align: center;
+  margin: 2% 0;
+}
+
+.resend-text {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  margin-bottom: 4px;
+}
+
+.resend-link {
+  background: none;
+  border: none;
+  color: var(--Branding);
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resend-link:hover {
+  color: var(--primary-green-hover);
+}
+
+.countdown-text {
+  color: var(--Secondary-Text);
+  font-weight: 500;
+}
+
+.countdown-hint {
+  font-size: 12px;
+  color: var(--Secondary-Text);
+  margin: 0;
+}
+
+/* Password Requirements */
+.password-requirements {
+  margin: 2% 0;
+}
+
+.requirements-title {
+  font-size: 14px;
+  color: var(--Black);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requirement-item {
+  font-size: 12px;
+  padding: 4px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.requirement-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.requirement-item.met {
+  color: #4CAF50;
+}
+
+.requirement-item.met:before {
+  background: #4CAF50;
+}
+
+.requirement-item.unmet {
+  color: var(--Secondary-Text);
+}
+
+.requirement-item.unmet:before {
+  background: #E0E0E0;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #dc3545;
+  margin-top: 4px;
+}
+
+/* Success Message Styles */
+.success-message {
+  text-align: center;
+  width: 100%;
+}
+
+.success-icon {
+  margin: 0 auto 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.success-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Black);
+  margin-bottom: 2%;
+}
+
+.success-description {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+  line-height: 1.5;
+  margin-bottom: 2%;
+}
+
+.redirect-message {
+  font-size: 12px;
+  color: var(--Secondary-Text);
+  font-style: italic;
+}
+
+.success-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.success-modal {
+  background: var(--White);
+  border-radius: 12px;
+  padding: 3%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.success-icon-large {
+  margin: 0 auto 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.redirect-info {
+  margin: 2% 0;
+}
+
+.redirect-text {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+}
+
+.countdown-number {
+  font-weight: 600;
+  color: var(--Branding);
+}
+
+/* Right Section Styles */
+.feature-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3%;
+  text-align: center;
+  margin-bottom: 3%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 2%;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--White);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.teacher-illustration {
+  max-width: 400px;
+  width: 100%;
+}
+
+.teacher-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive styles for teacher auth */
+@media (max-width: 768px) {
+  .teacher-auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left-section,
+  .auth-right-section {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .auth-right-section {
+    min-height: 300px;
+    padding: 2%;
+  }
+
+  .feature-card {
+    display: none;
+  }
+
+  .teacher-illustration {
+    max-width: 200px;
+  }
+
+  .language-selector {
+    position: static;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+
+  .auth-form-container {
+    padding: 2%;
+  }
+
+  .otp-input-container {
+    gap: 8px;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
