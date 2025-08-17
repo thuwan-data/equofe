@@ -19,7 +19,13 @@ export default function TeacherRegisterPage() {
     gender: 'Male',
     dateOfBirth: '',
     countryOfBirth: 'United States',
-    countryOfResidence: 'Select'
+    countryOfResidence: 'Select',
+    // Step 3: Profile Photo
+    profilePhoto: null as File | null,
+    // Step 4: Education
+    specializedArea: 'Elementary',
+    yearGroups: 'Early Years 1, Early Years 2',
+    subjects: 'Mathematics, English'
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -45,6 +51,21 @@ export default function TeacherRegisterPage() {
     }
 
     if (currentStep === 2) {
+      setCurrentStep(3);
+      return;
+    }
+
+    if (currentStep === 3) {
+      setCurrentStep(4);
+      return;
+    }
+
+    if (currentStep === 4) {
+      setCurrentStep(5);
+      return;
+    }
+
+    if (currentStep === 5) {
       setIsLoading(true);
 
       // Simulate registration process
@@ -53,8 +74,8 @@ export default function TeacherRegisterPage() {
       console.log('Teacher registration complete:', formData);
       setIsLoading(false);
 
-      // Redirect to login after successful registration
-      window.location.href = '/teachers/login';
+      // Redirect to teacher dashboard after successful registration
+      window.location.href = '/teachers/dashboard';
     }
   };
 
