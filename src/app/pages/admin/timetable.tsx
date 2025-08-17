@@ -121,7 +121,7 @@ export default function TimetablePage() {
       id: '5',
       title: 'Science Fair Setup',
       time: '08:00 am',
-      type: 'event',
+      type: 'exhibition',
       description: 'Science Club',
       color: '#A2EBC1'
     },
