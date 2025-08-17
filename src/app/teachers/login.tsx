@@ -112,13 +112,24 @@ export default function TeacherLoginPage() {
               {isLoading ? 'Logging in...' : 'Login'}
             </button>
 
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="forgot-password-link"
               onClick={handleForgotPassword}
             >
               Forgot Password?
             </button>
+
+            <div className="auth-footer">
+              <span>Don't have an account? </span>
+              <button
+                type="button"
+                className="auth-link"
+                onClick={() => window.location.href = '/teachers/register'}
+              >
+                Register here
+              </button>
+            </div>
           </form>
         </div>
       </div>
