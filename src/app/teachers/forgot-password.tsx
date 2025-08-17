@@ -103,7 +103,12 @@ export default function TeacherForgotPasswordPage() {
       </div>
 
       <div className="auth-right-section">
-        <div className="feature-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F1019ceb1af3d4bf0afecb4d455955167?format=webp&width=800"
+          alt="Forgot password background"
+          className="auth-background-image"
+        />
+        <div className="auth-overlay-content">
           <div className="feature-icons">
             <div className="feature-icon graduation-cap">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,14 +126,6 @@ export default function TeacherForgotPasswordPage() {
           <h2 className="feature-title">
             This section is intentionally created to add the features of the platform and system
           </h2>
-        </div>
-        
-        <div className="teacher-illustration">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F80d0adc184cf44e4b8e89700920e9294?format=webp&width=800"
-            alt="Professional teacher with books"
-            className="teacher-image"
-          />
         </div>
       </div>
     </div>
