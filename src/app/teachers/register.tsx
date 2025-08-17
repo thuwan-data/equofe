@@ -34,22 +34,41 @@ export default function TeacherRegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
+
+    if (currentStep === 1) {
+      if (formData.password !== formData.confirmPassword) {
+        alert('Passwords do not match');
+        return;
+      }
+      setCurrentStep(2);
       return;
     }
-    
-    setIsLoading(true);
-    
-    // Simulate registration process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Teacher registration:', formData);
-    setIsLoading(false);
-    
-    // Redirect to login after successful registration
-    window.location.href = '/teachers/login';
+
+    if (currentStep === 2) {
+      setIsLoading(true);
+
+      // Simulate registration process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      console.log('Teacher registration complete:', formData);
+      setIsLoading(false);
+
+      // Redirect to login after successful registration
+      window.location.href = '/teachers/login';
+    }
+  };
+
+  const handlePrevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const addLanguage = () => {
+    setFormData(prev => ({
+      ...prev,
+      additionalLanguages: [...prev.additionalLanguages, '']
+    }));
   };
 
   const handleBackToLogin = () => {
@@ -78,16 +97,18 @@ export default function TeacherRegisterPage() {
           </div>
 
           <div className="auth-header">
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="back-button"
-              onClick={handleBackToLogin}
+              onClick={currentStep === 1 ? handleBackToLogin : handlePrevStep}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <h1 className="auth-title">Register to Get Started</h1>
+            <h1 className="auth-title">
+              {currentStep === 1 ? 'Register to Get Started' : 'Personal Information'}
+            </h1>
           </div>
 
           <form onSubmit={handleSubmit} className="auth-form">
