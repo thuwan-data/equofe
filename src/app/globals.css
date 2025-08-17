@@ -3564,6 +3564,12 @@ body {
   filter: brightness(0) invert(1);
 }
 
+.nav-icon svg, .footer-item svg {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
 .sidebar-nav {
   flex: 1;
   display: flex;
@@ -3596,8 +3602,11 @@ body {
 }
 
 .nav-icon {
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
+  height: 20px;
 }
 
 .nav-label {
