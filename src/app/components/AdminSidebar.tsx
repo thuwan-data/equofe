@@ -137,6 +137,9 @@ export default function AdminSidebar({
         case 'students':
           window.location.href = '/pages/admin/students';
           break;
+        case 'timetable':
+          window.location.href = '/pages/admin/timetable';
+          break;
         default:
           break;
       }
