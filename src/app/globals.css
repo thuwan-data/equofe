@@ -4008,6 +4008,211 @@ body {
   }
 }
 
+/* ===== TEACHER TIMETABLE PAGE STYLES ===== */
+.timetable-page-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2%;
+  height: 100%;
+}
+
+.timetable-main-section {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2%;
+  box-shadow: var(--shadow);
+}
+
+.timetable-header {
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.timetable-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+.timetable-tabs {
+  display: flex;
+  gap: 1%;
+  margin-bottom: 3%;
+}
+
+.tab-btn {
+  background: #F8F9FA;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--Secondary-Text);
+}
+
+.tab-btn.active {
+  background: var(--Branding);
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #E9ECEF;
+}
+
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.lesson-card {
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: border-color 0.2s ease;
+}
+
+.lesson-card:hover {
+  border-color: var(--Branding);
+}
+
+.lesson-info {
+  flex: 1;
+}
+
+.lesson-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0 0 1% 0;
+}
+
+.lesson-subject {
+  font-size: 14px;
+  color: var(--Purple-2);
+  margin: 0 0 2% 0;
+  font-weight: 500;
+}
+
+.lesson-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  font-size: 12px;
+  align-items: center;
+}
+
+.lesson-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--BG);
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--Secondary-Text);
+}
+
+.lesson-meta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.lesson-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  align-items: flex-end;
+}
+
+.lesson-resources-btn {
+  background: none;
+  border: none;
+  color: var(--Branding);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.lesson-resources-btn:hover {
+  color: var(--primary-green-hover);
+}
+
+.start-lesson-btn {
+  background: var(--Sec-Color);
+  color: var(--Black);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-lesson-btn:hover {
+  background: #8FD9A8;
+}
+
+.timetable-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.timetable-sidebar .calendar-section,
+.timetable-sidebar .previous-classes-section {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2%;
+  box-shadow: var(--shadow);
+}
+
+.timetable-sidebar .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.timetable-sidebar .section-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+/* Responsive Design for Timetable */
+@media (max-width: 1024px) {
+  .timetable-page-content {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  .lesson-card {
+    flex-direction: column;
+    gap: 2%;
+  }
+
+  .lesson-actions {
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+  }
+}
+
 /* OTP Input Styles */
 .otp-input-container {
   display: flex;
