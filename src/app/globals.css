@@ -4213,6 +4213,148 @@ body {
   }
 }
 
+/* ===== ADMIN CLASS CARD STYLES ===== */
+.admin-class-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-class-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.admin-class-header {
+  margin-bottom: 3%;
+}
+
+.admin-class-subject {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Black);
+  margin: 0;
+}
+
+.admin-class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.admin-class-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+.admin-year-group,
+.admin-class-code {
+  font-size: 16px;
+  color: var(--Black);
+  margin: 0;
+  font-weight: 400;
+}
+
+.admin-schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  margin: 3% 0;
+}
+
+.schedule-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5%;
+}
+
+.admin-schedule-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5%;
+}
+
+.admin-schedule-item .schedule-day {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--Black);
+}
+
+.admin-schedule-item .schedule-time {
+  font-size: 14px;
+  color: var(--Secondary-Text);
+}
+
+.admin-class-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 4%;
+}
+
+.stat-group {
+  display: flex;
+  gap: 4%;
+}
+
+.admin-class-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5%;
+}
+
+.admin-class-stats .stat-label {
+  font-size: 14px;
+  color: var(--Black);
+  font-weight: 500;
+}
+
+.admin-class-stats .stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Black);
+}
+
+.admin-class-arrow {
+  background: var(--Branding);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-class-arrow:hover {
+  background: var(--primary-green-hover);
+}
+
+/* Responsive Design for Admin Class Cards */
+@media (max-width: 768px) {
+  .admin-schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-class-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3%;
+  }
+
+  .stat-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
 /* OTP Input Styles */
 .otp-input-container {
   display: flex;
