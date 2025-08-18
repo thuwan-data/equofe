@@ -29,59 +29,62 @@ export default function TimetablePage() {
 
   const events: { [key: string]: Event[] } = {
     '2030-05-01': [
-      { id: '1', title: 'Teacher Pro...', type: 'class', color: '#BB6BD9' },
+      { id: '1', title: 'Teacher Pro...', type: 'class', color: '#288474' }
     ],
     '2030-05-02': [
-      { id: '2', title: 'Students Day', type: 'event', color: '#A2EBC1' },
-      { id: '3', title: 'AP Calcula...', type: 'class', color: '#288474' },
+      { id: '2', title: 'Students Day', type: 'event', color: '#BB6BD9' },
+      { id: '3', title: 'AP Calcula...', type: 'exam', color: '#F59E0B' }
     ],
     '2030-05-03': [
-      { id: '4', title: 'Spring Conc...', type: 'event', color: '#288474' },
-    ],
-    '2030-05-05': [
-      { id: '5', title: 'Cinco de Ma...', type: 'event', color: '#BB6BD9' },
+      { id: '4', title: 'Spring Conc...', type: 'event', color: '#BB6BD9' }
     ],
     '2030-05-08': [
-      { id: '6', title: 'Science Fair...', type: 'event', color: '#A2EBC1' },
-      { id: '7', title: 'Teacher Mee...', type: 'meeting', color: '#288474' },
+      { id: '5', title: 'Science Fair...', type: 'event', color: '#288474' },
+      { id: '6', title: '2 more', type: 'class', color: '#A2EBC1' }
     ],
     '2030-05-09': [
-      { id: '8', title: 'Science Fair...', type: 'event', color: '#A2EBC1' },
-      { id: '9', title: 'PTA Meeting', type: 'meeting', color: '#FFD700' },
+      { id: '7', title: 'Teacher Mee...', type: 'meeting', color: '#F59E0B' },
+      { id: '8', title: 'Science Fair...', type: 'event', color: '#288474' },
+      { id: '9', title: 'PTA Meeting', type: 'meeting', color: '#F59E0B' }
+    ],
+    '2030-05-10': [
+      { id: '10', title: 'PTA Meeting', type: 'meeting', color: '#F59E0B' }
+    ],
+    '2030-05-12': [
+      { id: '11', title: 'Cinco de Ma...', type: 'event', color: '#BB6BD9' }
     ],
     '2030-05-13': [
-      { id: '10', title: 'English Liter...', type: 'class', color: '#BB6BD9' },
+      { id: '12', title: 'English Liter...', type: 'class', color: '#A2EBC1' }
     ],
     '2030-05-15': [
-      { id: '11', title: 'Varsity Trac...', type: 'event', color: '#FFD700' },
+      { id: '13', title: 'Varsity Trac...', type: 'event', color: '#F59E0B' }
     ],
     '2030-05-16': [
-      { id: '12', title: 'Junior Prom', type: 'event', color: '#288474' },
+      { id: '14', title: 'Junior Prom', type: 'event', color: '#BB6BD9' }
     ],
     '2030-05-19': [
-      { id: '13', title: 'Senior Proje...', type: 'class', color: '#BB6BD9' },
-      { id: '14', title: 'Teacher Mee...', type: 'meeting', color: '#288474' },
+      { id: '15', title: 'Senior Proj...', type: 'class', color: '#A2EBC1' },
+      { id: '16', title: '1 more', type: 'class', color: '#A2EBC1' }
+    ],
+    '2030-05-20': [
+      { id: '17', title: 'Teacher Mee...', type: 'meeting', color: '#F59E0B' }
     ],
     '2030-05-21': [
-      { id: '15', title: 'Board of Edu...', type: 'meeting', color: '#FFD700' },
-    ],
-    '2030-05-22': [
-      { id: '16', title: 'Art Exhibitio...', type: 'event', color: '#A2EBC1' },
-      { id: '17', title: 'Drama Club...', type: 'event', color: '#BB6BD9' },
-      { id: '18', title: 'PTA Meeting', type: 'meeting', color: '#FFD700' },
+      { id: '18', title: 'Board of Edu...', type: 'meeting', color: '#F59E0B' },
+      { id: '19', title: 'Art Exhibitio...', type: 'exhibition', color: '#BB6BD9' },
+      { id: '20', title: 'PTA Meeting', type: 'meeting', color: '#F59E0B' }
     ],
     '2030-05-26': [
-      { id: '19', title: 'Memorial D...', type: 'event', color: '#BB6BD9' },
+      { id: '21', title: 'Memorial D...', type: 'event', color: '#BB6BD9' }
     ],
     '2030-05-28': [
-      { id: '20', title: 'Sophomore...', type: 'class', color: '#A2EBC1' },
+      { id: '22', title: 'Sophomore...', type: 'class', color: '#A2EBC1' },
+      { id: '23', title: '1 more', type: 'class', color: '#A2EBC1' }
     ],
-    '2030-05-29': [
-      { id: '21', title: 'Art Fair & Ex...', type: 'event', color: '#FFD700' },
-    ],
-    '2030-05-31': [
-      { id: '22', title: 'Last Day of S...', type: 'event', color: '#288474' },
-    ],
+    '2030-05-30': [
+      { id: '24', title: 'Art Fair & Ex...', type: 'exhibition', color: '#BB6BD9' },
+      { id: '25', title: 'Last Day of S...', type: 'event', color: '#F59E0B' }
+    ]
   };
 
   const agendaItems: AgendaItem[] = [
@@ -89,7 +92,7 @@ export default function TimetablePage() {
       id: '1',
       title: 'Big Day and Celebration Day',
       time: '',
-      type: 'presentation',
+      type: 'exhibition',
       description: '',
       color: '#BB6BD9'
     },
@@ -103,7 +106,7 @@ export default function TimetablePage() {
     },
     {
       id: '3',
-      title: 'Fair Exhibition & Performance',
+      title: 'Fair, Exhibition & Performance',
       time: '',
       type: 'exhibition',
       description: '',
@@ -115,23 +118,26 @@ export default function TimetablePage() {
       time: '',
       type: 'meeting',
       description: '',
-      color: '#FFD700'
-    },
+      color: '#F59E0B'
+    }
+  ];
+
+  const todayAgenda: AgendaItem[] = [
     {
       id: '5',
       title: 'Science Fair Setup',
       time: '08:00 am',
       type: 'exhibition',
       description: 'Science Club',
-      color: '#A2EBC1'
+      color: '#288474'
     },
     {
       id: '6',
       title: 'Teacher Meeting',
       time: '11:00 am',
       type: 'meeting',
-      description: 'All Teacher',
-      color: '#FFD700'
+      description: 'All Teachers',
+      color: '#F59E0B'
     },
     {
       id: '7',
@@ -139,15 +145,15 @@ export default function TimetablePage() {
       time: '01:00 pm',
       type: 'track',
       description: 'Track Team',
-      color: '#FFD700'
+      color: '#BB6BD9'
     },
     {
       id: '8',
       title: 'Parents Meeting',
       time: '03:00 pm',
       type: 'meeting',
-      description: 'All Teacher and Parents',
-      color: '#FFD700'
+      description: 'All Teachers and Parents',
+      color: '#F59E0B'
     }
   ];
 
@@ -190,11 +196,6 @@ export default function TimetablePage() {
     return date.getMonth() === currentDate.getMonth();
   };
 
-  const isToday = (date: Date) => {
-    const today = new Date();
-    return date.toDateString() === today.toDateString();
-  };
-
   const navigateMonth = (direction: 'prev' | 'next') => {
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() + (direction === 'next' ? 1 : -1));
@@ -217,14 +218,15 @@ export default function TimetablePage() {
         />
 
         <section className="content-section">
-          <div className="timetable-page-content">
-            <div className="timetable-header">
-              <div className="view-controls">
-                <div className="view-mode-tabs">
+          <div className="admin-timetable-layout">
+            {/* Calendar Section */}
+            <div className="admin-calendar-main">
+              <div className="admin-timetable-header">
+                <div className="admin-view-controls">
                   {(['Month', 'Week', 'Day'] as const).map((mode) => (
                     <button
                       key={mode}
-                      className={`view-tab ${viewMode === mode ? 'active' : ''}`}
+                      className={`admin-view-tab ${viewMode === mode ? 'active' : ''}`}
                       onClick={() => setViewMode(mode)}
                     >
                       {mode}
@@ -232,135 +234,106 @@ export default function TimetablePage() {
                   ))}
                 </div>
                 
-                <div className="calendar-navigation">
-                  <button className="nav-btn" onClick={() => navigateMonth('prev')}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                  
-                  <h2 className="current-month">
-                    {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
-                  </h2>
-                  
-                  <button className="nav-btn" onClick={() => navigateMonth('next')}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                </div>
-
-                <button className="today-btn">Today</button>
-              </div>
-            </div>
-
-            <div className="timetable-layout">
-              <div className="calendar-section">
-                <div className="calendar-grid">
-                  <div className="calendar-header">
-                    {daysOfWeek.map((day) => (
-                      <div key={day} className="day-header">{day}</div>
-                    ))}
-                  </div>
-                  
-                  <div className="calendar-body">
-                    {days.map((day, index) => {
-                      const dateKey = formatDateKey(day);
-                      const dayEvents = events[dateKey] || [];
-                      
-                      return (
-                        <div
-                          key={index}
-                          className={`calendar-cell ${!isCurrentMonth(day) ? 'other-month' : ''} ${isToday(day) ? 'today' : ''}`}
-                        >
-                          <div className="day-number">{day.getDate()}</div>
-                          <div className="day-events">
-                            {dayEvents.slice(0, 3).map((event) => (
-                              <div
-                                key={event.id}
-                                className="event-item"
-                                style={{ backgroundColor: event.color }}
-                              >
-                                {event.title}
-                              </div>
-                            ))}
-                            {dayEvents.length > 3 && (
-                              <div className="more-events">
-                                +{dayEvents.length - 3} more
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              <div className="agenda-section">
-                <div className="agenda-header">
-                  <h3>Agenda</h3>
-                  <button className="agenda-menu">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="1" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="5" r="1" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="19" r="1" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </button>
-                </div>
+                <h2 className="admin-calendar-title">
+                  {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
+                </h2>
                 
-                <div className="agenda-list">
-                  {agendaItems.map((item) => (
-                    <div key={item.id} className="agenda-item">
-                      <div 
-                        className="agenda-color-indicator"
-                        style={{ backgroundColor: item.color }}
-                      />
-                      <div className="agenda-content">
-                        <div className="agenda-title">{item.title}</div>
-                        {item.description && (
-                          <div className="agenda-description">{item.description}</div>
-                        )}
-                      </div>
-                      {item.time && (
-                        <div className="agenda-time">{item.time}</div>
-                      )}
+                <div className="admin-calendar-actions">
+                  <button className="admin-today-btn">Today</button>
+                  <div className="admin-nav-controls">
+                    <button className="admin-nav-btn" onClick={() => navigateMonth('prev')}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="admin-nav-btn" onClick={() => navigateMonth('next')}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="admin-calendar-grid-container">
+                <div className="admin-calendar-days-header">
+                  {daysOfWeek.map((day) => (
+                    <div key={day} className="admin-day-header">
+                      {day}
                     </div>
                   ))}
                 </div>
 
-                <div className="agenda-date-section">
-                  <h4>May, 8 2030</h4>
-                  <div className="daily-agenda">
-                    <div className="daily-item">
-                      <div className="time-indicator">08:00 am</div>
-                      <div className="daily-event">
-                        <div className="event-title">Science Fair Setup</div>
-                        <div className="event-subtitle">Science Club</div>
+                <div className="admin-calendar-grid">
+                  {days.map((day, index) => {
+                    const dayKey = formatDateKey(day);
+                    const dayEvents = events[dayKey] || [];
+                    
+                    return (
+                      <div
+                        key={index}
+                        className={`admin-calendar-day ${!isCurrentMonth(day) ? 'other-month' : ''}`}
+                      >
+                        <span className="admin-day-number">{day.getDate()}</span>
+                        <div className="admin-day-events">
+                          {dayEvents.map((event) => (
+                            <div
+                              key={event.id}
+                              className="admin-event-item"
+                              style={{ backgroundColor: event.color }}
+                            >
+                              <span className="admin-event-title">{event.title}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                    <div className="daily-item">
-                      <div className="time-indicator">11:00 am</div>
-                      <div className="daily-event">
-                        <div className="event-title">Teacher Meeting</div>
-                        <div className="event-subtitle">All Teacher</div>
-                      </div>
-                    </div>
-                    <div className="daily-item">
-                      <div className="time-indicator">01:00 pm</div>
-                      <div className="daily-event">
-                        <div className="event-title">Varsity Track Meet</div>
-                        <div className="event-subtitle">Track Team</div>
-                      </div>
-                    </div>
-                    <div className="daily-item">
-                      <div className="time-indicator">03:00 pm</div>
-                      <div className="daily-event">
-                        <div className="event-title">Parents Meeting</div>
-                        <div className="event-subtitle">All Teacher and Parents</div>
-                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Agenda Sidebar */}
+            <div className="admin-agenda-sidebar">
+              <div className="admin-agenda-header">
+                <h3>Agenda</h3>
+                <button className="admin-agenda-menu-btn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="1" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="12" cy="5" r="1" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="19" cy="12" r="1" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </button>
+              </div>
+              
+              <div className="admin-agenda-list">
+                {agendaItems.map((item) => (
+                  <div key={item.id} className="admin-agenda-item" style={{ borderLeftColor: item.color }}>
+                    <div className="admin-agenda-content">
+                      <h4 className="admin-agenda-title">{item.title}</h4>
                     </div>
                   </div>
+                ))}
+              </div>
+
+              <div className="admin-today-agenda">
+                <h4>May, 8 2030</h4>
+                <div className="admin-today-events">
+                  {todayAgenda.map((item) => (
+                    <div key={item.id} className="admin-today-event">
+                      <div className="admin-event-icon" style={{ backgroundColor: item.color }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="white" strokeWidth="2"/>
+                          <circle cx="12" cy="7" r="4" stroke="white" strokeWidth="2"/>
+                        </svg>
+                      </div>
+                      <div className="admin-event-details">
+                        <h5>{item.title}</h5>
+                        <p>{item.description}</p>
+                        <span>{item.time}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

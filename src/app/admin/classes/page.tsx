@@ -212,59 +212,60 @@ export default function ClassesPage() {
 
             <div className="classes-grid">
               {filteredClasses.map((classData) => (
-                <div key={classData.id} className="class-card" onClick={() => handleClassClick(classData)}>
-                  <div className="class-card-header">
-                    <h3 className="class-subject">{classData.subject}</h3>
-                    <button className="class-menu-btn">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="1" stroke="currentColor" strokeWidth="2"/>
-                        <circle cx="12" cy="5" r="1" stroke="currentColor" strokeWidth="2"/>
-                        <circle cx="12" cy="19" r="1" stroke="currentColor" strokeWidth="2"/>
-                      </svg>
-                    </button>
+                <div key={classData.id} className="admin-class-card" onClick={() => handleClassClick(classData)}>
+                  <div className="admin-class-header">
+                    <h3 className="admin-class-subject">{classData.subject}</h3>
                   </div>
 
-                  <div className="class-details">
-                    <div className="class-detail-item">
-                      <span className="detail-label">Year Group:</span>
-                      <span className="detail-value">{classData.yearGroup}</span>
+                  <div className="admin-class-info">
+                    <div className="admin-class-meta">
+                      <p className="admin-year-group">Year Group : {classData.yearGroup}</p>
+                      <p className="admin-class-code">Class Code : {classData.classCode}</p>
                     </div>
-                    <div className="class-detail-item">
-                      <span className="detail-label">Class Code:</span>
-                      <span className="detail-value">{classData.classCode}</span>
-                    </div>
-                  </div>
 
-                  <div className="class-schedule">
-                    {classData.schedule.map((session, index) => (
-                      <div key={index} className="schedule-item">
-                        <span className="schedule-day">{session.day}</span>
-                        <span className="schedule-time">({session.time})</span>
+                    <div className="admin-schedule-grid">
+                      <div className="schedule-column">
+                        {classData.schedule.slice(0, 2).map((session, index) => (
+                          <div key={index} className="admin-schedule-item">
+                            <span className="schedule-day">{session.day}</span>
+                            <span className="schedule-time">({session.time})</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                      <div className="schedule-column">
+                        {classData.schedule.slice(2, 4).map((session, index) => (
+                          <div key={index} className="admin-schedule-item">
+                            <span className="schedule-day">{session.day}</span>
+                            <span className="schedule-time">({session.time})</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-                  <div className="class-stats">
-                    <div className="stat-item">
-                      <span className="stat-label">Total Students</span>
-                      <span className="stat-value">{classData.totalStudents}</span>
-                    </div>
-                    <div className="stat-item">
-                      <span className="stat-label">Inclusive Students</span>
-                      <span className="stat-value">{classData.inclusiveStudents}</span>
-                    </div>
-                  </div>
+                    {classData.schedule.length > 4 && (
+                      <div className="admin-schedule-item">
+                        <span className="schedule-day">{classData.schedule[4].day}</span>
+                        <span className="schedule-time">({classData.schedule[4].time})</span>
+                      </div>
+                    )}
 
-                  <div className="class-footer">
-                    <div className="class-teacher">
-                      <span className="teacher-label">Teacher:</span>
-                      <span className="teacher-name">{classData.teacher}</span>
+                    <div className="admin-class-stats">
+                      <div className="stat-group">
+                        <div className="stat-item">
+                          <span className="stat-label">Total Students</span>
+                          <span className="stat-value">{classData.totalStudents}</span>
+                        </div>
+                        <div className="stat-item">
+                          <span className="stat-label">Inclusive Students</span>
+                          <span className="stat-value">{classData.inclusiveStudents}</span>
+                        </div>
+                      </div>
+                      <button className="admin-class-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
                     </div>
-                    <button className="view-class-btn">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </button>
                   </div>
                 </div>
               ))}
