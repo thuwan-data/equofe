@@ -186,7 +186,7 @@ export default function TeacherDashboardPage() {
         </header>
 
         {/* Stats Cards */}
-        <section className="stats-section">
+        <section className="teacher-stats-section">
           <div className="stats-grid">
             {statsData.map((stat, index) => (
               <div key={index} className="stat-card">
@@ -198,7 +198,8 @@ export default function TeacherDashboardPage() {
         </section>
 
         {/* Content Area */}
-        <section className="content-area">
+        <div className="teacher-content-wrapper">
+          <section className="content-area">
           <div className="content-grid">
             {/* Left Column - Timetable */}
             <div className="timetable-section">
@@ -286,7 +287,8 @@ export default function TeacherDashboardPage() {
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        </div>
       </main>
     </div>
   );
