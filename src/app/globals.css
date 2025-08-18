@@ -3762,6 +3762,19 @@ body {
   box-shadow: var(--shadow);
 }
 
+.teacher-content-wrapper .timetable-section,
+.teacher-content-wrapper .right-column > div {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: 1px solid #E0E0E0;
+  border-radius: var(--border-radius);
+  background: white;
+  padding: 2%;
+  box-shadow: var(--shadow);
+}
+
 .section-header {
   display: flex;
   justify-content: space-between;
