@@ -217,37 +217,40 @@ export default function TimetablePage() {
         />
 
         <section className="content-section">
-          <div className="timetable-page-content">
-            <div className="timetable-header">
-              <div className="view-controls">
-                <div className="view-mode-tabs">
+          <div className="admin-timetable-layout">
+            {/* Calendar Section */}
+            <div className="admin-calendar-main">
+              <div className="admin-timetable-header">
+                <div className="admin-view-controls">
                   {(['Month', 'Week', 'Day'] as const).map((mode) => (
                     <button
                       key={mode}
-                      className={`view-tab ${viewMode === mode ? 'active' : ''}`}
+                      className={`admin-view-tab ${viewMode === mode ? 'active' : ''}`}
                       onClick={() => setViewMode(mode)}
                     >
                       {mode}
                     </button>
                   ))}
                 </div>
-                
-                <div className="calendar-navigation">
-                  <button className="nav-btn" onClick={() => navigateMonth('prev')}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                  
-                  <h2 className="current-month">
-                    {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
-                  </h2>
-                  
-                  <button className="nav-btn" onClick={() => navigateMonth('next')}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
+
+                <h2 className="admin-calendar-title">
+                  {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
+                </h2>
+
+                <div className="admin-calendar-actions">
+                  <button className="admin-today-btn">Today</button>
+                  <div className="admin-nav-controls">
+                    <button className="admin-nav-btn" onClick={() => navigateMonth('prev')}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="admin-nav-btn" onClick={() => navigateMonth('next')}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
                 <button className="today-btn">Today</button>
