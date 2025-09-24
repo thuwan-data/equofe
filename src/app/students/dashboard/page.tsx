@@ -6,7 +6,11 @@ import Image from 'next/image';
 export default function StudentDashboardPage() {
   const [activeTab, setActiveTab] = useState('timetable');
 
-  const handleNav = (id: string) => { setActiveTab(id); };
+  const handleNav = (id: string) => {
+    setActiveTab(id);
+    if (id === 'subjects') window.location.href = '/students/subjects';
+    if (id === 'timetable') window.location.href = '/students/dashboard';
+  };
 
   const todayClasses = [
     { id: 1, subject: 'Mathematics', level: '5MTH5', time: '08:00 - 09:30', date: '12th July 2024', resources: 'Lesson Resources' },
