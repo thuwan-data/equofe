@@ -21,7 +21,7 @@ export default function StudentRegisterPage() {
       <header className="login-header">
         <div className="brand-logo">
           <span className="brand-text">Equo</span>
-          <span className="brand-tagline">Inclusion for all</span>
+          {/* <span className="brand-tagline">Inclusion for all</span> */}
         </div>
       </header>
       <main className="login-main">

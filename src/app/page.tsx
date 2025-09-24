@@ -12,7 +12,7 @@ export default function HomePage() {
       <header className="login-header">
         <div className="brand-logo">
           <Image src="/logo-equo.svg" alt="Equo" width={120} height={40} />
-          <span className="brand-tagline">Inclusion for all</span>
+          {/* <span className="brand-tagline">Inclusion for all</span> */}
         </div>
         <div className="language-selector">
           <span>Language: English</span>
