@@ -155,7 +155,7 @@ export default function ClassesPage() {
   };
 
   const handleClassClick = (classData: ClassData) => {
-    console.log('View class details:', classData);
+    window.location.href = `/admin/classes/${classData.id}`;
   };
 
   const filteredClasses = classes.filter(classData =>

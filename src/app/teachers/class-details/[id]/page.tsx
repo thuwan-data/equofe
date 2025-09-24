@@ -1,73 +1,56 @@
 'use client';
 
 import { useState } from 'react';
+import { useParams } from 'next/navigation';
 import Image from 'next/image';
 
-export default function TeacherDashboardPage() {
+export default function ClassDetailsPage() {
+  const params = useParams();
+  const [activeTab, setActiveTab] = useState('timetable');
 
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const classData = {
+    id: params.id,
+    title: '7MH17 - 23rd August 2024',
+    subject: 'Mathematics',
+    level: '7MH17',
+    date: '23rd August 2024',
+    duration: '45 min',
+    views: 25,
+    recording: {
+      thumbnail: 'https://cdn.builder.io/api/v1/image/assets%2F8fb58adcda2b4a1ea321e1672f825117%2F4475f93359f943a1b948e70e8b4b5a9b?format=webp&width=800',
+      title: '7MH17 - 23rd August 2024'
+    },
+    uploadedFiles: [
+      {
+        id: 1,
+        name: 'The basic of Mathematics',
+        size: '1.2 MB',
+        type: 'PDF',
+        uploadDate: 'Aug 22, 2024, 10:30 AM'
+      },
+      {
+        id: 2,
+        name: 'The basic of Mathematics',
+        size: '1.2 MB', 
+        type: 'PDF',
+        uploadDate: 'Aug 22, 2024, 10:30 AM'
+      },
+      {
+        id: 3,
+        name: 'The basic of Mathematics',
+        size: '1.2 MB',
+        type: 'PDF', 
+        uploadDate: 'Aug 22, 2024, 10:30 AM'
+      }
+    ],
+    classNotes: `The basic of Mathematics lesson introduction of some comprehensive. In its elementary practice, the use of the natural introduction is the theory's historical foundations to use, the use of specific theories used by the simple theoretical concepts, their implications and the results of their application including such processes. Useful insights, from those. The use of specific evidence that use use specific evaluation.
 
-  const handleNavigation = (itemId: string) => {
-    setActiveTab(itemId);
-    if (itemId === 'timetable') {
-      window.location.href = '/teachers/timetable';
-    } else if (itemId === 'assigned-classes') {
-      window.location.href = '/teachers/assigned-classes';
-    } else if (itemId === 'resource-library') {
-      window.location.href = '/teachers/resource-library';
-    } else if (itemId === 'passwords') {
-      window.location.href = '/teachers/passwords';
-    }
-    // Dashboard stays on current page
+Basic concepts of learning including numbers and geometry, fractions, the topic. Specific mathematical concepts use standard mathematics, arithmetic, algebra, geometry, and trigonometry etc. And can be used in mathematics.
+
+Such topics are algebra and numbers. The numbers are useful in that mathematics can be used including computational concepts. Algebra and computational concepts are basic in the arithmetic concepts by mathematics. The elementary concepts use algebra, and mathematical concepts related to basic mathematics. Basic concepts related to elementary and standard introduction use algebra principles or practice learning students.
+
+Basic concepts of algebra and mathematics have basic algebra learning.`
   };
-
-  const todayClasses = [
-    {
-      id: 1,
-      subject: 'Mathematics',
-      level: '7MH15',
-      time: '08:00 - 09:30',
-      date: '12th July 2024',
-      students: 6,
-      status: 'Class List',
-      action: 'Start Lesson'
-    },
-    {
-      id: 2,
-      subject: 'Physics',
-      level: '9PHY2',
-      time: '09:00 - 09:30',
-      date: '12th July 2024',
-      students: 6,
-      status: 'Class List',
-      action: 'Start Lesson'
-    }
-  ];
-
-  const previousClasses = [
-    {
-      id: 1,
-      subject: 'Physics',
-      level: '9PHY2',
-      lesson: 'Lesson 2',
-      date: '21st Dec 2024',
-      details: '3 Lesson Details'
-    },
-    {
-      id: 2,
-      subject: 'Mathematics',
-      level: '7MH12',
-      lesson: 'Lesson 3',
-      date: '20th Dec 2024',
-      details: '3 Lesson Details'
-    }
-  ];
-
-  const statsData = [
-    { number: '3', label: 'Classes Assigned', color: '#288474' },
-    { number: '55', label: 'Total Students', color: '#288474' },
-    { number: '27', label: 'Inclusive Students', color: '#288474' }
-  ];
 
   const sidebarItems = [
     {
@@ -126,6 +109,19 @@ export default function TeacherDashboardPage() {
       )
     }
   ];
+
+  const handleNavigation = (itemId: string) => {
+    setActiveTab(itemId);
+    if (itemId === 'dashboard') {
+      window.location.href = '/teachers/dashboard';
+    } else if (itemId === 'timetable') {
+      window.location.href = '/teachers/timetable';
+    }
+  };
+
+  const handleBack = () => {
+    window.location.href = '/teachers/timetable';
+  };
 
   return (
     <div className="teacher-dashboard">
@@ -192,7 +188,14 @@ export default function TeacherDashboardPage() {
         {/* Header */}
         <header className="teacher-header">
           <div className="header-content">
-            <h1 className="greeting">Good Day Moseed</h1>
+            <div className="header-left">
+              <button className="back-btn" onClick={handleBack}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <h1 className="greeting">Class Details</h1>
+            </div>
             <div className="header-actions">
               <button className="notification-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,108 +215,86 @@ export default function TeacherDashboardPage() {
           </div>
         </header>
 
-        {/* Stats Cards */}
-        <section className="teacher-stats-section">
-          <div className="stats-grid">
-            {statsData.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <div className="stat-number" style={{ color: stat.color }}>{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Content Area */}
         <div className="teacher-content-wrapper">
-          <section className="content-area">
-          <div className="content-grid">
-            {/* Left Column - Timetable */}
-            <div className="timetable-section">
-              <div className="section-header">
-                <h2>Timetable</h2>
-                <button className="header-btn">📅</button>
-              </div>
-              
-              <div className="timetable-content">
-                <h3>Classes today</h3>
-                <div className="classes-list">
-                  {todayClasses.map((classItem) => (
-                    <div key={classItem.id} className="class-card">
-                      <div className="class-info">
-                        <h4>{classItem.subject}</h4>
-                        <p className="class-level">{classItem.level}</p>
-                        <div className="class-meta">
-                          <span className="time">{classItem.time}</span>
-                          <span className="date">{classItem.date}</span>
-                          <span className="students">👥 {classItem.students}</span>
-                          <span className="status">{classItem.status}</span>
-                        </div>
-                      </div>
-                      <button className="action-btn start-lesson">
-                        {classItem.action}
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="right-column">
-              {/* Calendar */}
-              <div className="calendar-section">
-                <div className="section-header">
-                  <h3>Calendar</h3>
-                  <button className="calendar-btn">📅</button>
-                </div>
-                <div className="calendar-widget">
-                  <div className="calendar-header">
-                    <span>Mon</span>
-                    <span>Tue</span>
-                    <span>Wed</span>
-                    <span>Thu</span>
-                    <span>Fri</span>
-                    <span>Sat</span>
-                    <span>Sun</span>
+          <section className="class-details-content">
+            <div className="class-details-grid">
+              {/* Recording Section */}
+              <div className="recording-section">
+                <h2>Recording</h2>
+                <div className="recording-player">
+                  <img 
+                    src={classData.recording.thumbnail}
+                    alt="Recording thumbnail"
+                    className="recording-thumbnail"
+                  />
+                  <div className="play-overlay">
+                    <button className="play-btn">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="5,3 19,12 5,21" fill="white"/>
+                      </svg>
+                    </button>
                   </div>
-                  <div className="calendar-grid">
-                    {Array.from({ length: 35 }, (_, i) => {
-                      const day = i - 5; // Adjust for calendar start
-                      const isToday = day === 12;
-                      const isCurrentMonth = day > 0 && day <= 31;
-                      
-                      return (
-                        <div 
-                          key={i} 
-                          className={`calendar-day ${isToday ? 'today' : ''} ${!isCurrentMonth ? 'other-month' : ''}`}
-                        >
-                          {isCurrentMonth ? day : ''}
-                        </div>
-                      );
-                    })}
+                  <div className="recording-info-overlay">
+                    <p>Lesson title goes here</p>
                   </div>
+                </div>
+                <div className="recording-meta">
+                  <h3>{classData.recording.title}</h3>
+                  <div className="recording-stats">
+                    <span className="views">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                      {classData.views}
+                    </span>
+                  </div>
+                  <button className="view-btn">View</button>
                 </div>
               </div>
 
-              {/* Previous Classes */}
-              <div className="previous-classes-section">
-                <h3>Previous Classes</h3>
-                <div className="previous-classes-list">
-                  {previousClasses.map((classItem) => (
-                    <div key={classItem.id} className="previous-class-item">
-                      <div className="class-tag">AI</div>
-                      <div className="class-details">
-                        <p><strong>{classItem.subject}</strong> | {classItem.level}</p>
-                        <p className="lesson-info">{classItem.lesson} | {classItem.date}</p>
-                        <p className="lesson-details">{classItem.details}</p>
+              {/* Right Sidebar */}
+              <div className="class-details-sidebar">
+                {/* Uploaded Files */}
+                <div className="uploaded-files-section">
+                  <div className="section-header">
+                    <h3>Uploaded Files</h3>
+                    <button className="upload-btn">+ Upload Resources</button>
+                  </div>
+                  <div className="files-list">
+                    {classData.uploadedFiles.map((file) => (
+                      <div key={file.id} className="file-item">
+                        <div className="file-info">
+                          <h4>{file.name}</h4>
+                          <p>{file.uploadDate}</p>
+                          <span className="file-size">{file.size}</span>
+                        </div>
+                        <button className="file-action-btn">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="1" stroke="currentColor" strokeWidth="2"/>
+                            <circle cx="12" cy="5" r="1" stroke="currentColor" strokeWidth="2"/>
+                            <circle cx="12" cy="19" r="1" stroke="currentColor" strokeWidth="2"/>
+                          </svg>
+                        </button>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+
+                {/* Class Notes */}
+                <div className="class-notes-section">
+                  <div className="section-header">
+                    <h3>Class Notes</h3>
+                    <button className="edit-btn">Edit Notes</button>
+                  </div>
+                  <div className="notes-content">
+                    <h4>The basic of Mathematics</h4>
+                    <p>{classData.classNotes}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </section>
         </div>
       </main>

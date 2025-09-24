@@ -3,70 +3,64 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function TeacherDashboardPage() {
-
-  const [activeTab, setActiveTab] = useState('dashboard');
+export default function AssignedClassesPage() {
+  const [activeTab, setActiveTab] = useState('assigned-classes');
 
   const handleNavigation = (itemId: string) => {
     setActiveTab(itemId);
-    if (itemId === 'timetable') {
+    if (itemId === 'dashboard') {
+      window.location.href = '/teachers/dashboard';
+    } else if (itemId === 'timetable') {
       window.location.href = '/teachers/timetable';
-    } else if (itemId === 'assigned-classes') {
-      window.location.href = '/teachers/assigned-classes';
     } else if (itemId === 'resource-library') {
       window.location.href = '/teachers/resource-library';
     } else if (itemId === 'passwords') {
       window.location.href = '/teachers/passwords';
     }
-    // Dashboard stays on current page
+    // Assigned classes stays on current page
   };
 
-  const todayClasses = [
+  const assignedClasses = [
     {
       id: 1,
       subject: 'Mathematics',
-      level: '7MH15',
-      time: '08:00 - 09:30',
-      date: '12th July 2024',
-      students: 6,
-      status: 'Class List',
-      action: 'Start Lesson'
+      yearGroup: 'Year 7',
+      classCode: '7MH12',
+      schedule: [
+        { day: 'Monday', time: '09:30 am to 10:30 am' },
+        { day: 'Wednesday', time: '12:00 pm to 01:00 pm' },
+        { day: 'Friday', time: '10:00 am to 11:00 am' }
+      ],
+      totalStudents: 35,
+      inclusiveStudents: 6
     },
     {
       id: 2,
-      subject: 'Physics',
-      level: '9PHY2',
-      time: '09:00 - 09:30',
-      date: '12th July 2024',
-      students: 6,
-      status: 'Class List',
-      action: 'Start Lesson'
-    }
-  ];
-
-  const previousClasses = [
-    {
-      id: 1,
-      subject: 'Physics',
-      level: '9PHY2',
-      lesson: 'Lesson 2',
-      date: '21st Dec 2024',
-      details: '3 Lesson Details'
+      subject: 'English',
+      yearGroup: 'Year 5',
+      classCode: 'SEN21',
+      schedule: [
+        { day: 'Monday', time: '09:30 am to 10:30 am' },
+        { day: 'Wednesday', time: '12:00 pm to 01:00 pm' },
+        { day: 'Friday', time: '10:00 am to 11:00 am' }
+      ],
+      totalStudents: 35,
+      inclusiveStudents: 6
     },
     {
-      id: 2,
-      subject: 'Mathematics',
-      level: '7MH12',
-      lesson: 'Lesson 3',
-      date: '20th Dec 2024',
-      details: '3 Lesson Details'
+      id: 3,
+      subject: 'Physics',
+      yearGroup: 'Year 6',
+      classCode: '6PHY1',
+      schedule: [
+        { day: 'Monday', time: '09:30 am to 10:30 am' },
+        { day: 'Tuesday', time: '11:00 pm to 12:00 pm' },
+        { day: 'Thursday', time: '09:30 am to 10:30 am' },
+        { day: 'Thursday', time: '09:30 am to 10:30 am' }
+      ],
+      totalStudents: 35,
+      inclusiveStudents: 6
     }
-  ];
-
-  const statsData = [
-    { number: '3', label: 'Classes Assigned', color: '#288474' },
-    { number: '55', label: 'Total Students', color: '#288474' },
-    { number: '27', label: 'Inclusive Students', color: '#288474' }
   ];
 
   const sidebarItems = [
@@ -192,7 +186,7 @@ export default function TeacherDashboardPage() {
         {/* Header */}
         <header className="teacher-header">
           <div className="header-content">
-            <h1 className="greeting">Good Day Moseed</h1>
+            <h1 className="greeting">Assigned Classes</h1>
             <div className="header-actions">
               <button className="notification-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,108 +206,51 @@ export default function TeacherDashboardPage() {
           </div>
         </header>
 
-        {/* Stats Cards */}
-        <section className="teacher-stats-section">
-          <div className="stats-grid">
-            {statsData.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <div className="stat-number" style={{ color: stat.color }}>{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Content Area */}
         <div className="teacher-content-wrapper">
           <section className="content-area">
-          <div className="content-grid">
-            {/* Left Column - Timetable */}
-            <div className="timetable-section">
-              <div className="section-header">
-                <h2>Timetable</h2>
-                <button className="header-btn">📅</button>
-              </div>
-              
-              <div className="timetable-content">
-                <h3>Classes today</h3>
-                <div className="classes-list">
-                  {todayClasses.map((classItem) => (
-                    <div key={classItem.id} className="class-card">
-                      <div className="class-info">
-                        <h4>{classItem.subject}</h4>
-                        <p className="class-level">{classItem.level}</p>
-                        <div className="class-meta">
-                          <span className="time">{classItem.time}</span>
-                          <span className="date">{classItem.date}</span>
-                          <span className="students">👥 {classItem.students}</span>
-                          <span className="status">{classItem.status}</span>
-                        </div>
-                      </div>
-                      <button className="action-btn start-lesson">
-                        {classItem.action}
-                      </button>
+            <div className="assigned-classes-grid">
+              {assignedClasses.map((classData) => (
+                <div key={classData.id} className="assigned-class-card">
+                  <div className="class-header">
+                    <h3 className="class-subject">{classData.subject}</h3>
+                    <div className="class-meta">
+                      <span className="year-group">{classData.yearGroup}</span>
+                      <span className="class-code">Class Code: {classData.classCode}</span>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="right-column">
-              {/* Calendar */}
-              <div className="calendar-section">
-                <div className="section-header">
-                  <h3>Calendar</h3>
-                  <button className="calendar-btn">📅</button>
-                </div>
-                <div className="calendar-widget">
-                  <div className="calendar-header">
-                    <span>Mon</span>
-                    <span>Tue</span>
-                    <span>Wed</span>
-                    <span>Thu</span>
-                    <span>Fri</span>
-                    <span>Sat</span>
-                    <span>Sun</span>
                   </div>
-                  <div className="calendar-grid">
-                    {Array.from({ length: 35 }, (_, i) => {
-                      const day = i - 5; // Adjust for calendar start
-                      const isToday = day === 12;
-                      const isCurrentMonth = day > 0 && day <= 31;
-                      
-                      return (
-                        <div 
-                          key={i} 
-                          className={`calendar-day ${isToday ? 'today' : ''} ${!isCurrentMonth ? 'other-month' : ''}`}
-                        >
-                          {isCurrentMonth ? day : ''}
-                        </div>
-                      );
-                    })}
+                  
+                  <div className="class-schedule">
+                    {classData.schedule.map((slot, index) => (
+                      <div key={index} className="schedule-slot">
+                        <span className="schedule-day">{slot.day}</span>
+                        <span className="schedule-time">({slot.time})</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="class-stats">
+                    <div className="stat-item">
+                      <div className="stat-value">{classData.totalStudents}</div>
+                      <div className="stat-label">Total Students</div>
+                    </div>
+                    <div className="stat-item">
+                      <div className="stat-value">{classData.inclusiveStudents}</div>
+                      <div className="stat-label">Inclusive Students</div>
+                    </div>
+                  </div>
+
+                  <div className="class-actions">
+                    <button className="class-action-btn view-details" onClick={() => window.location.href = `/teachers/class-details/${classData.id}`}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-              </div>
-
-              {/* Previous Classes */}
-              <div className="previous-classes-section">
-                <h3>Previous Classes</h3>
-                <div className="previous-classes-list">
-                  {previousClasses.map((classItem) => (
-                    <div key={classItem.id} className="previous-class-item">
-                      <div className="class-tag">AI</div>
-                      <div className="class-details">
-                        <p><strong>{classItem.subject}</strong> | {classItem.level}</p>
-                        <p className="lesson-info">{classItem.lesson} | {classItem.date}</p>
-                        <p className="lesson-details">{classItem.details}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
-          </div>
           </section>
         </div>
       </main>

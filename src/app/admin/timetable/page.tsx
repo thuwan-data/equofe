@@ -8,7 +8,7 @@ interface Event {
   id: string;
   title: string;
   time?: string;
-  type: 'class' | 'meeting' | 'exam' | 'event';
+  type: 'class' | 'meeting' | 'exam' | 'event' | 'exhibition';
   color: string;
 }
 
@@ -279,8 +279,7 @@ export default function TimetablePage() {
                           {dayEvents.map((event) => (
                             <div
                               key={event.id}
-                              className="admin-event-item"
-                              style={{ backgroundColor: event.color }}
+                              className={`admin-event-item event-${event.type}`}
                             >
                               <span className="admin-event-title">{event.title}</span>
                             </div>
@@ -308,7 +307,7 @@ export default function TimetablePage() {
               
               <div className="admin-agenda-list">
                 {agendaItems.map((item) => (
-                  <div key={item.id} className="admin-agenda-item" style={{ borderLeftColor: item.color }}>
+                  <div key={item.id} className={`admin-agenda-item agenda-${item.type}`}>
                     <div className="admin-agenda-content">
                       <h4 className="admin-agenda-title">{item.title}</h4>
                     </div>
@@ -321,7 +320,7 @@ export default function TimetablePage() {
                 <div className="admin-today-events">
                   {todayAgenda.map((item) => (
                     <div key={item.id} className="admin-today-event">
-                      <div className="admin-event-icon" style={{ backgroundColor: item.color }}>
+                      <div className={`admin-event-icon icon-${item.type}`}>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="white" strokeWidth="2"/>
                           <circle cx="12" cy="7" r="4" stroke="white" strokeWidth="2"/>
